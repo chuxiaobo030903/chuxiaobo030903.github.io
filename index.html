@@ -1,9 +1,132 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>首页</title>
+    <link href="./base/css/pc_base.css" rel="stylesheet">
+    <link href="./base/css/pc_common.css" rel="stylesheet">
+    <link href="./index.css" rel="stylesheet">
+    <script src="./base/3rd/jquery-1.10.2/jquery-1.10.2.min.js"></script>
+    <script src="./base/3rd/vue-2.2.0/vue.js"></script>
+    <script src="./base/js/pc_common.js"></script>
 </head>
 <body>
-    <h1> Hello Html!!   cxb </h1>
+<div id="xconten">
+    <div class="mt20 mb20">
+        <p>{{ message }}</p>
+        <p v-for="todo in todos">{{ todo.text }}</p>
+    </div>
+    <!--头部-->
+    <div class="cxbui-header">
+        <div class="cxbui-main">
+            <a class="cxbui-title">Cxbui</a>
+            <ul class="cxbui-nav">
+                <li class="cxbui-nav-item"><a href="#">示例</a></li>
+                <li class="cxbui-nav-item"><a href="#">文档</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--内容-->
+    <div class="cxbui-main">
+        <div class="cxbui-tree fl">
+           <ul class="mt30">
+               <p class="fb title"><span class="ml10">UI组件</span></p>
+               <li><a href="#">下拉菜单</a></li>
+               <li><a href="#">导航栏下拉菜单</a></li>
+               <li><a href="#">仿京东左侧导航</a></li>
+               <li><a href="#">手风琴</a></li>
+
+
+           </ul>
+        </div>
+        <div class="cxbui-content"></div>
+    </div>
+    <!--尾部-->
+    <div class="cxbui-footer">
+        <div class="cxbui-main">
+            <p>email:chuxiaobo030903@qq.com</p>
+            <p>
+                <a class="mr5" href="#">案例</a>
+                <a href="#" target="_blank">Git仓库</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+    <!--<div style="margin-left: 300px;margin-top: 50px">-->
+        <!--&lt;!&ndash;下拉组件&ndash;&gt;-->
+        <!--<div class="xb-select" id="xxx">-->
+            <!--<p>を入力する</p>-->
+             <!--<ul class="xbhide xb-selectList" style="top:25px;width:100%">-->
+                <!--<li>1</li>-->
+                <!--<li>2</li>-->
+                <!--<li>3</li>-->
+             <!--</ul>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash;导航栏下拉菜单&ndash;&gt;-->
+        <!--&lt;!&ndash;<div style="margin-top: 100px" class="xbselect" id="nav_select">&ndash;&gt;-->
+            <!--&lt;!&ndash;<p class="fb">製品情報</p>&ndash;&gt;-->
+            <!--&lt;!&ndash;<ul class="xbhide xbselectList">&ndash;&gt;-->
+                <!--&lt;!&ndash;<li class="xbli"><a href="#">情報1</a></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="xbdiv">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="http://www.baidu.com">製品1</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="http://www.baidu.com">製品1</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="http://www.baidu.com">製品1</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="http://www.baidu.com">製品1</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="http://www.baidu.com">製品11111111111111111111111111111</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li class="xbli"><a href="#">情報2</a></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="xbdiv">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="http://www.baidu.com">製品2</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li class="xbli"><a href="#">情報333333333333333333333333333333333333333333333333333</a></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="xbdiv">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="http://www.163.com">製品3</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li class="xbli"><a href="#">情報1</a></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li class="xbli"><a href="#">情報2</a></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li class="xbli"><a href="#">情報3</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+
+
+        <!--&lt;!&ndash;仿京东左侧导航栏&ndash;&gt;-->
+        <!--<div style="margin-top: 100px;" class="xbnav" id="xnav">-->
+            <!--<ul>-->
+                <!--<li><a href="http://www.163.com">中国人</a></li>-->
+                <!--<div class="xbtips">-->
+                    <!--<p><a href="http://www.baidu.com">baidu</a></p>-->
+                <!--</div>-->
+                <!--<li><a>2222</a></li>-->
+                <!--<div class="xbtips">-->
+                    <!--<p><a href="http://www.baidu.com">souhu</a></p>-->
+                <!--</div>-->
+            <!--</ul>-->
+        <!--</div>-->
+
+    <!--</div>-->
+
+
+<script>
+//    xbselect("xxx");
+//    xbnav_select("nav_select");
+    xbaccordion("aaa");
+//    xbnav("xnav",200);
+new Vue({
+    el: '#xconten',
+    data: {
+        message: 'Hello Vue.js!',
+        todos: [
+            { text: '学习 JavaScript' },
+            { text: '学习 Vue' },
+            { text: '整个牛项目'}
+        ]
+    }
+
+})
+</script>
 </body>
 </html>

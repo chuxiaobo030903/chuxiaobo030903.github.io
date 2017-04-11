@@ -1,0 +1,163 @@
+/*下拉框组件*/
+.xbhide
+{
+    display: none;
+}
+.xb-select {
+    height: 30px;
+    width:100px;
+    line-height:30px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #dfdfdf;
+    background-image: url(../img/bj1.png);
+    background-repeat:no-repeat;
+    background-position:right;
+}
+.xb-select p {
+    width: 100px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+    color: #3d3d3d;
+    text-indent:5px;
+    cursor: pointer;
+}
+.xb-selectList {
+    list-style: none;
+    position: absolute;
+    top: 30px;
+    background-color: white;
+    text-indent: 7px;
+    border: 1px solid #b7b7b7;
+    left: -1px;
+    width: 200px;
+    line-height: 24px;
+    cursor: pointer;
+    z-index: 9999;
+    font-size: 14px;
+    height:200px;
+    overflow:auto;
+}
+.xb-selectList li
+{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width:100%;
+}
+.xb-selectList li:hover
+{
+    background-color:#DDDDDD;
+}
+
+/*导航下拉菜单*/
+.xbselect{height:30px;margin-top:-1px;width:190px;line-height:30px;position:relative;cursor:pointer;
+    background-color: #c6d7ff;background-image: url(../img/bj16.png);background-repeat: no-repeat;
+    background-position: 94% 50%;}
+.xbselect p {width: 190px;text-indent: 15px;color: #012571;font-size: 14px;white-space: nowrap;
+    text-overflow: ellipsis;-o-text-overflow: ellipsis;overflow: hidden;cursor: pointer;}
+.xbselectList {border: 1px solid #d2d2d2;width: 188px;text-indent: 10px;line-height: 30px;font-size: 12px;
+    overflow: visible;list-style: none;position: absolute;top: 30px;background-color: white;
+    cursor: pointer;z-index: 9999;}
+.xbselectList .xbli{display: block;background-image: url(../img/bj12.png);background-repeat:no-repeat;
+    background-position:96% 50%;}
+.xbselectList li:hover {background-color: #012571;color: white; width: 190px;margin-left:-1px;
+    background-image: url(../img/bj13.png);background-repeat:no-repeat;background-position:96% 50%;}
+.xbselectList li a:hover{color: white;}
+.xbselectList li a {display: block;width: 175px;padding-right: 13px;color: #4e4e4e;line-height: 30px;
+    text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+.xbdiv {position: absolute;z-index: 99;width: 198px;border: 1px solid #d2d2d2;background: #fff;
+    display: none;left: 188px;margin-top: -30px;}
+.xbdiv a {display: block;width: 100%;padding-right: 13px;color: #4e4e4e;line-height: 30px;
+    text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+.xbdiv a:hover{ text-decoration:underline;color: #396DD6;}
+.xbon{ background-color: #012571;background-image: url(../img/bj13.png);background-repeat:no-repeat;
+    background-position:96% 50%;}
+.xba{color: white;}
+
+/*手风琴组件*/
+
+.xbaccordion
+{
+    width:100%;
+}
+.xbaccordion .title
+{
+    font-size:14px;
+    color:#395a9d;
+    cursor: pointer;
+    line-height:30px;
+    background-repeat:no-repeat;
+    padding:5px 0px 5px 20px;
+    border-bottom: 1px solid #dfdfdf;
+}
+.xbaccordion .bj
+{
+    background-image: url(../img/bj14.png);
+    background-position:10px;
+}
+.xbaccordion .on
+{
+    background-image: url(../img/bj15.png);
+    background-position:5px;
+}
+.xbaccordion .content
+{
+    color: #787878;
+    border-bottom: 1px solid #dfdfdf;
+}
+.xbaccordion .content li
+{
+    padding-left:20px;
+    line-height:25px;
+    cursor: pointer;
+}
+.xbaccordion .content li:hover
+{
+    background-color:#6c84b8;
+    color:#ffffff;
+}
+
+.xbaccordion .onclick
+{
+    background-color:#6c84b8;
+    color:#ffffff;
+    cursor: pointer;
+}
+/*左侧仿京东导航栏组件*/
+.xbnav{width:198px;border: 1px solid #dfdfdf;min-height:200px;position: relative;height:575px;border-top:0px;}
+.xbnav ul li{float: left;width: 100%;text-indent: 5px;line-height:27px;cursor: pointer;}
+.xbnav ul li:hover{border:2px solid #1a448e;border-right:0px;background:#fff;margin-top:-2px;margin-left:-1px;
+    position: relative;z-index: 999;padding-right:2px;}
+.xbnav .xbon{border:2px solid #1a448e;border-right:0px;background:#fff;margin-top:-2px;margin-left:-1px;
+    position: relative;z-index: 999;padding-right: 2px;color:#4d73bf;}
+.xbnav .xbtips{float: left;position:absolute;z-index:99;width:806px;height:456px;border:2px solid #1a448e;
+    border-top: 0px;background:#fff;top:0px;display:none;}
+.xbnav div a:hover{text-decoration:underline;color:#4d73bf;}
+.xbnav .xbtips .xleft .xboverflow{float:left;width:100%;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;
+    color: #888888;line-height: 30px;}
+.xbnav .xbtips .xleft .xboverflow:hover{color:#4d73bf;}
+.xbnav .xbtext{float: left;width:100%;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+.xbnav div h3{margin:0px 0px 0px 20px;padding:25px 0px 20px ;color:#3d3d3d;border-bottom: 1px dotted #dfdfdf;font-size: 15px;
+    font-weight: bold;}
+.xbnav .xbfooter{float:left;border-bottom:1px dotted #dfdfdf;margin:0px 20px;padding:10px 0px 10px;}
+.xbnav .xbtitle{float:left;width:160px;font-size: 15px;font-weight: bold;color:#3d3d3d;text-overflow: ellipsis;
+    white-space: nowrap;overflow: hidden;}
+.xbnav .xbcontent{float: left;width:586px;}
+.xbnav .xbline{float:left;margin-left: 20px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;
+    line-height: 22px;color: #888888;}
+
+.xbnav .xbtips .xleft{ float: left;width: 605px;height: 456px;border-right:1px solid #dfdfdf;}
+.xbnav .xbtips .xright{ float: left;width: 200px;height: 456px;}
+.xbnav .xbtips .xleft .xone{float: left;width: 193px;padding-left:25px;color: #888888;padding-top:20px;}
+.xbnav .xbtips .xleft .xtwo{float: left;width: 193px;color: #888888;padding-top:20px;}
+.xbnav .xbtips .xright .ximg{float: left; width:140px;height: 170px;border-bottom:1px dashed #dfdfdf; padding:10px 30px;}
+.xbnav .xbtips .xright .xb-font{float:left;color:#666666;margin:0px 30px;line-height:20px;text-overflow:ellipsis;
+    white-space: nowrap;overflow: hidden;width: 157px;}
+.xbnav .xbtips .xright .xb-four{float:left;color:#666666;line-height:20px;text-overflow:ellipsis;
+    white-space: nowrap;overflow: hidden;width: 157px;margin-right: 15px;}
+.xbnav .xbtips img{display:block;}
+.xbnav .xbtips .xright .xb-img{width:140px;color:#888888;float: left;text-align: center;margin-top:8px;
+    text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
