@@ -1,0 +1,31 @@
+@charset "utf-8";
+.ccui-iconfont{
+
+  .ccui-lists{
+    width: 100% !important;
+  }
+
+  .ccui-lists li{
+    float:left;
+    width: 125px;
+    height:180px;
+    text-align: center;
+    list-style: none !important;
+  }
+  .ccui-lists .icon{
+    font-size: 42px;
+    line-height: 100px;
+    margin: 10px 0;
+    color:#333;
+    -webkit-transition: font-size 0.25s ease-out 0s;
+    -moz-transition: font-size 0.25s ease-out 0s;
+    transition: font-size 0.25s ease-out 0s;
+
+  }
+  .ccui-lists .icon:hover{
+    font-size: 100px;
+  }
+  .ccui-fontclass{
+    font-family:"微软雅黑";
+  }
+}

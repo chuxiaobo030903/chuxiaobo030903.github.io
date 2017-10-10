@@ -1,0 +1,51 @@
+@charset "utf-8";
+.ccui-subnav {
+    width: 1190px;
+    margin: 0 auto;
+  .ccui-tree {
+    width: 220px;
+    overflow: auto;
+  }
+  .ccui-tree .title {
+    font-size: 18px;
+    line-height: 40px;
+    border-bottom: 1px solid #eee;
+  }
+  .ccui-tree li {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 40px;
+    margin-left: 15px;
+  }
+
+  .ccui-tree .ccui-tag {
+    text-decoration: none;
+    cursor: pointer;
+    color: #565656;
+    display: block;
+  }
+  .ccui-tree .ccui-tag:hover {
+    color: #20a0ff;
+  }
+  .ccui-active{
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    color: #20a0ff;
+  }
+
+  .cxbui-content {
+    margin-left: 221px;
+    width: 969px;
+    min-height: 900px;
+  }
+  .cxbui-footer {
+    padding: 30px 0;
+    line-height: 30px;
+    text-align: center;
+    background-color: #eee;
+    color: #666;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+/*清除所有元素轮廓线，及内外边距属性*/
+*{margin: 0;padding: 0;outline: none;}
+/*清除输入焦点轮廓线*/
+*:focus{outline: none;}
+
+html, body{width: 100%;height: 100%;}
+/*字体更具实际项目自己添加字体样式和大小*/
+body{font-family: arial,"微软雅黑";font-size: 14px;overflow: auto;min-width:990px;color: #3d3d3d;}
+a {text-decoration: none;cursor: pointer;color:#565656;}
+a:hover{text-decoration:none;}
+img{border: 0;}
+ul{list-style: none;}
+/*input在chrom浏览器下默认显示黄色变成白色*/
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+/*清除浮动*/
+.clearfix:after{visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+* html .clearfix{zoom: 1;}
+/* IE6 */
+*:first-child + html .clearfix{zoom: 1;}
+/*清除所有*/
+.clear{clear: both;}
+
+code{font-family:"宋体";}
+/*注意:在用xbox PC端下布局时在火狐浏览器下如果用到此ＭＳＰゴシック字体，*/
+/*必须要在字体后面加上"ＭＳＰゴシック" !important 调整优先级*/
+
+/*布局公共CSS类*/
+.xbox
+{
+    /* Webkit: collapse white-space between units 去掉IE10以下布局都不可以用*/
+    letter-spacing: -0.31em;
+    *letter-spacing: normal; /* reset IE < 8 */
+    *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
+    text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+    /* IE10 uses display: flexbox */
+    display: -ms-flexbox;
+    -ms-flex-flow: row wrap;
+}
+.xbox-1,.xbox-1-2,.xbox-1-3,.xbox-2-3,.xbox-1-4,.xbox-3-4,.xbox-1-5,.xbox-2-5,.xbox-3-5,.xbox-4-5,.xbox-1-6,.xbox-5-6,
+.xbox-11-24,.xbox-13-24,.xbox-7-12,.xbox-5-12,.xbox-1-8,.xbox-3-8,.xbox-5-8,.xbox-7-8,.xbox-1-24,.xbox-1-12,.xbox-7-24,.xbox-5-24
+{display: inline-block;*display: inline;zoom: 1;letter-spacing: normal;word-spacing: normal;
+    vertical-align: top;/*设置元素的垂直对齐文本的顶部 */
+    text-rendering: auto;}
+.xbox-1{width: 100%;}
+.xbox-1-2{width: 50%;*width: 49.9690%;}
+.xbox-1-3{width: 33.3333%;*width: 33.3023%;}
+.xbox-2-3{width: 66.6667%;*width: 66.6357%;}
+.xbox-1-4{width: 25%;*width: 24.9690%;}
+.xbox-3-4{width: 75%;*width: 74.9690%;}
+.xbox-1-5{width: 20%;*width: 19.9690%;}
+.xbox-2-5{width: 40%;*width: 39.9690%;}
+.xbox-3-5{width: 60%;*width: 59.9690%;}
+.xbox-4-5{ width: 80%;*width: 79.9690%;}
+.xbox-1-6{width: 16.6667%;*width: 16.6357%;}
+.xbox-5-6{ width: 83.3333%;*width: 83.3023%;}
+.xbox-11-24 {width: 45.8333%;*width: 45.8023%;}
+.xbox-13-24 {width: 54.1667%;*width: 54.1357%;}
+.xbox-5-12{width: 41.6667%;*width: 41.6357%;}
+.xbox-7-12{width: 58.3333%;*width: 58.3023%;}
+.xbox-1-8{width: 12.5000%;*width: 12.4690%;}
+.xbox-3-8{width: 37.5000%;*width: 37.4690%;}
+.xbox-7-8{width: 87.5000%;*width: 87.4690%;}
+.xbox-5-8{width: 62.5000%;*width: 62.4690%;}
+.xbox-1-24 {width: 4.1667%;*width: 4.1357%;}
+.xbox-1-12{width: 8.3333%;*width: 8.3023%;}
+.xbox-5-24{ width: 20.8333%;*width: 20.3023%;}
+.xbox-7-24{ width: 29.1667%;*width: 29.1357%;}
+
+/*文本超出省略*/
+.textoverflow {text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+.xhide{display: none}
+.xshow{display: block}
+.tc{text-align: center;}
+.tr{text-align:right;}
+.tl{text-align:left;}
+.fl{float: left}
+.fr{float: right}
+.fb{font-weight: bold}
+
+.ml1{margin-left:1px} .ml2{margin-left:2px} .ml3{margin-left:3px} .ml4{margin-left:4px} .ml5{margin-left:5px} .ml10{margin-left:10px} .ml15{margin-left:15px} .ml20{margin-left:20px} .ml25{margin-left:25px} .ml30{margin-left:30px}
+.mr1{margin-right:1px} .mr2{margin-right:2px} .mr3{margin-right:3px} .mr4{margin-right:4px} .mr5{margin-right: 5px} .mr10{margin-right: 10px} .mr15{margin-right: 15px} .mr20{margin-right: 20px} .mr25{margin-right: 25px} .mr30{margin-right: 30px}
+.mt1{margin-top:1px} .mt2{margin-top:2px} .mt3{margin-top:3px} .mt4{margin-top:4px} .mt5{margin-top: 5px} .mt10{margin-top: 10px} .mt15{margin-top: 15px} .mt20{margin-top: 20px}.mt25{margin-top: 25px} .mt30{margin-top: 30px}
+.mb1{margin-bottom:1px} .mb2{margin-bottom:2px} .mb3{margin-bottom:3px} .mb4{margin-bottom:4px} .mb5{margin-bottom: 5px} .mb10{margin-bottom:10px} .mb15{margin-bottom: 15px} .mb20{margin-bottom:20px} .mb25{margin-bottom: 25px} .mb30{margin-bottom:30px}
+
+
+.pl1{padding-left:1px} .pl2{padding-left:2px} .pl3{padding-left:3px} .pl4{padding-left:4px} .pl5{padding-left: 5px} .pl10{padding-left:10px} .pl15{padding-left: 15px} .pl20{padding-left: 20px} .pl25{padding-left: 25px;} .pl30{padding-left: 30px}
+.pr1{padding-right:1px} .pr2{padding-right:2px} .pr3{padding-right:3px} .pr4{padding-right:4px} .pr5{padding-right: 5px} .pr10{padding-right:10px} .pr15{padding-right: 15px} .pr20{padding-right: 20px} .pr25{padding-right: 25px;} .pr30{padding-right: 30px}
+.pt1{padding-top:1px} .pt2{padding-top:2px} .pt3{padding-top:3px} .pt4{padding-top:4px} .pt5{padding-top: 5px} .pt10{padding-top:10px} .pt15{padding-top: 15px} .pt20{padding-top:20px} .pt25{padding-top: 25px;} .pt30{padding-top: 30px}
+.pb1{padding-bottom:1px} .pb2{padding-bottom:2px} .pb3{padding-bottom:3px} .pb4{padding-bottom:4px} .pb5{padding-bottom: 5px} .pb10{padding-bottom: 10px} .pb15{padding-bottom: 15px} .pb20{padding-bottom: 20px} .pb25{padding-bottom: 25px;} .pb30{padding-bottom:30px}
+/*表单验证错误提示样式*/
+.help-block{color: #a94442;}
+
+
+/*更加需要后添加的公共类*/
+.xfont24{
+    font-size: 24px;
+}
+.xfont18{
+    font-size: 18px;
+}
+.xfont12{
+    font-size: 12px;
+}
+.xfont14{
+    font-size: 14px;
+}
+
+.xlh25{line-height: 25px}
+
+.xccui-main{
+    width: 1190px;
+    margin: 0 auto;
+}
+.xccui-content{
+    margin-left: 221px;
+    margin-bottom: 50px;
+}
+.xccui-border{
+    border: 1px solid #eaeefb;
+    border-radius: 4px;
+}
+.xccui-meta{
+    background-color: #f9fafc;
+    border-top: 1px solid #eaeefb;
+    color: #3182bd;
+    padding: 0px 20px;
+    overflow-x: auto;
+}
+.xccui-lh{
+    line-height: 1.5;
+    font-size:16px;
+}
+.xccui-tip {
+    padding: 8px 16px;
+    background-color: #ecf8ff;
+    border-radius: 4px;
+    border-left: 5px solid #50bfff;
+}
+.xccui-tip p{
+    line-height: 25px;
+}

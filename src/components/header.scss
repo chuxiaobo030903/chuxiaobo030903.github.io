@@ -1,0 +1,38 @@
+@charset "utf-8";
+.ccui-header{
+  background-color: #20a0ff;
+  height: 80px;
+  line-height: 80px;
+
+  .ccui-main{
+    position: relative;
+    width: 1190px;
+    margin: 0 auto;
+  }
+  .ccui-main .ccui-title{
+    color:#ffffff;
+    font-size: 35px;
+  }
+  .ccui-main .ccui-nav{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    background: none;
+  }
+  .ccui-nav .ccui-nav-item{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 60px;
+  }
+  .ccui-nav .ccui-nav-item  a{
+    display: block;
+    padding: 0 20px;
+    color: #e3ecf7;
+    font-size: 16px;
+  }
+  .ccui-nav .ccui-nav-item a:hover{
+    color: #ffffff;
+  }
+}
