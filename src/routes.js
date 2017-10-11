@@ -18,7 +18,7 @@ import Stick from './views/stick.vue'
 Vue.use(Router);
 
 export default new Router({
-    mode:'hash', //去除URl上多余的#
+    mode:'history', //去除URl上多余的#
     routes:[
         { path: '*', component: Index },
         {path: '/',component: App},
