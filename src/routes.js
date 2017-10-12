@@ -20,6 +20,7 @@ Vue.use(Router);
 export default new Router({
     mode:'history', //去除URl上多余的#
     routes:[
+        { path: '*', component: Index },
         {path: '/',component: App},
         {path: '/index',component:Index},
         {path: '/iconfont',component:Iconfont},
