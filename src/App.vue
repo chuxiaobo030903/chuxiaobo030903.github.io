@@ -18,7 +18,7 @@
             return {}
         },
         created(){
-            this.$router.push({path: './index'});
+//            this.$router.push({path: './index'});
         },
         components:{
             CcuiHeader,

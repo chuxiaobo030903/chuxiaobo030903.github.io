@@ -16,7 +16,7 @@
         data:function(){
             return {
                 items:[
-                    {name:'select选择器',tag:true,url:'/'},
+                    {name:'select选择器',tag:true,url:'/index'},
                     {name:'Icon图标',tag:false,url:'/iconfont'},
                     {name:'导航栏下拉菜单',tag:false,url:'./navselect'},
                     {name:'仿京东左侧商品分类导航菜单',tag:false,url:'/navmenu'},

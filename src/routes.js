@@ -19,7 +19,7 @@ Vue.use(Router);
 
 export default new Router({
     routes:[
-        {path: '/',component: App},
+        {path: '/',component: Index},
         {path: '/index',component:Index},
         {path: '/iconfont',component:Iconfont},
         {path: '/navselect',component:Navselect},
