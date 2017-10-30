@@ -1,5 +1,5 @@
 
-import Vue from 'vue';
+import Vue from 'vue'
 import Router from 'vue-router'
 import App from './App.vue'
 import Index from './views/index.vue'
@@ -33,3 +33,4 @@ export default new Router({
         {path: '/stick',component:Stick},
     ]
 })
+

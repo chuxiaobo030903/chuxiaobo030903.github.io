@@ -2,13 +2,14 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './routes.js'
-
+import store from './store.js'
 
 Vue.config.debug = true;//开启错误提示
 
 new Vue({
             el: '#ccui',
-            router: router,
+            router,
+            store,
             template: '<App/>',
             components: {App}
 })

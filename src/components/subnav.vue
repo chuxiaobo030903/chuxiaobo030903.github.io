@@ -4,7 +4,8 @@
             <ul class="mt30">
                 <p class="fb title">UI组件</p>
                 <li  v-for="(item,index) in items" :key="item.id">
-                    <a @click="cc_open(item.url,index)" :class="{'ccui-active':item.tag,'ccui-tag': !item.tag}">{{item.name}}</a>
+                    <!--<a @click="cc_open(item,index)" :class="{'ccui-active':item.tag,'ccui-tag': !item.tag}">{{item.name}}</a>-->
+                    <router-link  active-class="ccui-active" class="ccui-tag":to="item.url">{{item.name}}</router-link>
                 </li>
             </ul>
         </div>
@@ -31,17 +32,19 @@
             }
         },
         methods: {
-            cc_open:function (url,index) {
-                var vm = this;
-                for (var i = 0; i < vm.items.length; i++) {
-                    if (i == index) {
-                        vm.items[i].tag = true;
-                        continue;
-                    }
-                    vm.items[i].tag = false;
-                }
-                this.$router.push({path: url});
-            }
+//            cc_open:function (item,index) {
+//                var vm = this;
+//                for (var i = 0; i < vm.items.length; i++) {
+//                    if (i == index) {
+//                        vm.items[i].tag = true;
+//                        continue;
+//                    }
+//                    vm.items[i].tag = false;
+//                }
+//                this.$router.push({path: item.url});
+//
+//                console.log(this.$store.state.author );
+//            },
         }
     }
 </script>
