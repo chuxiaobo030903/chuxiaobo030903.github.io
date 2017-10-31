@@ -46,7 +46,6 @@
   .ccui-subnav .ccui-tree .ccui-tag {
     text-decoration: none;
     cursor: pointer;
-    color: #565656;
     display: block; }
   .ccui-subnav .ccui-tree .ccui-tag:hover {
     color: #20a0ff; }
