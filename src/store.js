@@ -3,11 +3,9 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
-const store = new Vuex.Store({
+export default  new Vuex.Store({
     // 定义状态
     state: {
-        author: 'Wise Wrong'
+        author: 'Wise Wrong2222'
     }
 })
-
-export default store

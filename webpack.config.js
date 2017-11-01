@@ -5,12 +5,14 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');  //分离css单�
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/main.js',//入口文件,字符串或数组或者是对象所表示的含义不一样
+    entry: {
+        app: ['babel-polyfill', './src/main.js']//入口文件,字符串或数组或者是对象所表示的含义不一样
+    },
     // output参数是个对象，用于定义构建后的文件的输出。
     output: {
         path: path.resolve(__dirname, './dist'),//定义用来存放打包后文件的输出目录
         publicPath: '/dist/',//指定资源文件引用的目录
-        filename: 'app.js',
+        filename: '[name].js',
     },
     module: {
         //rules 来指定规则，它是一个数组，里面是每一个对象，对不同的文件指定具体的规则。

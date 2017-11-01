@@ -13,6 +13,7 @@ import Slideshow from './views/slideshow.vue'
 import Verification from './views/verification.from.vue'
 import Popups from './views/popups.vue'
 import Stick from './views/stick.vue'
+import Mindex from './views/mobile/m.index.vue'
 
 
 Vue.use(Router);
@@ -31,6 +32,9 @@ export default new Router({
         {path: '/verification',component:Verification},
         {path: '/popups',component:Popups },
         {path: '/stick',component:Stick},
+    //    移动端页面
+        {path: '/mindex',component:Mindex},
+
     ]
 })
 
