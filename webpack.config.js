@@ -6,7 +6,8 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: ['babel-polyfill', './src/main.js']//入口文件,字符串或数组或者是对象所表示的含义不一样
+        app: ['babel-polyfill', './src/pc.js'],//入口文件,字符串或数组或者是对象所表示的含义不一样
+        mobile: ['babel-polyfill', './src/mobile.js']
     },
     // output参数是个对象，用于定义构建后的文件的输出。
     output: {
@@ -48,9 +49,14 @@ module.exports = {
             allChunks: true,
         }),
         new HtmlWebpackPlugin({
-            title: 'ccui',
-            hash: true,
-            filename: 'index.html'
+            template: './index.html',
+            filename: 'index.html',
+            thunks: ['pc']
+        }),
+        new HtmlWebpackPlugin({
+            template: './mobile.html',
+            filename: 'mobile.html',
+            thunks: ['mobile']
         }),
         new webpack.ProvidePlugin({
             jQuery: "jquery",
@@ -62,8 +68,8 @@ module.exports = {
         alias: {
             //'vue$': 'vue/dist/vue.esm.js',
             'vue': 'vue/dist/vue.js',
-            'src': path.resolve(__dirname, './src'),
-            'assets': path.resolve(__dirname, './src/assets'),
+            'src': path.resolve(__dirname, './src/pc'),
+            'assets': path.resolve(__dirname, './src/pc/assets'),
         }
     },
     //webpack-dev-server配置
@@ -79,23 +85,23 @@ module.exports = {
     devtool: '#eval-source-map'
 }
 
-if (process.env.NODE_ENV === 'production') {
-    module.exports.devtool = '#source-map'
-    // http://vue-loader.vuejs.org/en/workflow/production.html
-    module.exports.plugins = (module.exports.plugins || []).concat([
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: '"production"'
-            }
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            sourceMap: true,
-            compress: {
-                warnings: false
-            }
-        }),
-        new webpack.LoaderOptionsPlugin({
-            minimize: true
-        })
-    ])
-}
+//if (process.env.NODE_ENV === 'production') {
+//    module.exports.devtool = '#source-map'
+//    // http://vue-loader.vuejs.org/en/workflow/production.html
+//    module.exports.plugins = (module.exports.plugins || []).concat([
+//        new webpack.DefinePlugin({
+//            'process.env': {
+//                NODE_ENV: '"production"'
+//            }
+//        }),
+//        new webpack.optimize.UglifyJsPlugin({
+//            sourceMap: true,
+//            compress: {
+//                warnings: false
+//            }
+//        }),
+//        new webpack.LoaderOptionsPlugin({
+//            minimize: true
+//        })
+//    ])
+//}

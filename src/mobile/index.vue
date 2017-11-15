@@ -1,8 +1,6 @@
 <template>
-    <div class=" xccui-main">
-        <div class="xccui-content">
-            <div class="mt30 ml30"><p>移动端ZZ现在想Z小Z想</p></div>
-        </div>
+    <div>
+        12312312312213123移动页面
     </div>
 </template>
 <script>

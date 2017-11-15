@@ -8,10 +8,10 @@
 </template>
 
 <script>
-    import CcuiHeader from './components/header.vue';
-    import SubNav from './components/subnav.vue';
-    require('./base/ccbase.js');
-    require('./base/ccbase.css');
+    import CcuiHeader from './pc/components/header.vue';
+    import SubNav from './pc/components/subnav.vue';
+    require('./pc/base/ccbase.js');
+    require('./pc/base/ccbase.css');
 
     export default {
         data(){
