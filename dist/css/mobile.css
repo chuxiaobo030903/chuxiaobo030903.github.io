@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .font-12px {
   font-size: 12px; }
   [data-dpr="2"] .font-12px {
@@ -5,15 +6,13 @@
   [data-dpr="3"] .font-12px {
     font-size: 36px; }
 
-/*0.8em*/
-.font-15px {
-  font-size: 15px; }
-  [data-dpr="2"] .font-15px {
-    font-size: 30px; }
-  [data-dpr="3"] .font-15px {
-    font-size: 45px; }
+.font-14px {
+  font-size: 14px; }
+  [data-dpr="2"] .font-14px {
+    font-size: 28px; }
+  [data-dpr="3"] .font-14px {
+    font-size: 42px; }
 
-/*0.9em*/
 .font-16px {
   font-size: 16px; }
   [data-dpr="2"] .font-16px {
@@ -21,7 +20,13 @@
   [data-dpr="3"] .font-16px {
     font-size: 48px; }
 
-/*1em*/
+.font-18px {
+  font-size: 18px; }
+  [data-dpr="2"] .font-18px {
+    font-size: 36px; }
+  [data-dpr="3"] .font-18px {
+    font-size: 54px; }
+
 .font-24px {
   font-size: 24px; }
   [data-dpr="2"] .font-24px {
@@ -29,7 +34,70 @@
   [data-dpr="3"] .font-24px {
     font-size: 72px; }
 
-/*1.2em*/
-.xxx {
-  height: 0.4rem;
-  background-color: #1a448e; }
+.ccui-wrap {
+  /* 绝对定位，进行内部滚动 */
+  position: absolute;
+  z-index: 1;
+  top: 1.2rem;
+  bottom: 0;
+  overflow-x: hidden;
+  /* 增加该属性，可以增加弹性 */
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  width: 100%;
+  -webkit-box-shadow: 0 1px 6px #ccc;
+  box-shadow: 0 1px 6px #ccc; }
+
+.ccui-wrap .ccui-content {
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+
+.ccui-m-index .ccui-header {
+  height: 1.2rem;
+  line-height: 1.2rem;
+  font-size: 18px;
+  background-color: #efeff4;
+  text-align: center;
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  -webkit-box-shadow: 0 1px 6px #ccc;
+  box-shadow: 0 1px 6px #ccc; }
+  [data-dpr="2"] .ccui-m-index .ccui-header {
+    font-size: 36px; }
+  [data-dpr="3"] .ccui-m-index .ccui-header {
+    font-size: 54px; }
+
+.ccui-m-index .ccui-table-view-cell {
+  position: relative;
+  padding: 0.26667rem 0.4rem;
+  font-size: 14px;
+  overflow: hidden; }
+  [data-dpr="2"] .ccui-m-index .ccui-table-view-cell {
+    font-size: 28px; }
+  [data-dpr="3"] .ccui-m-index .ccui-table-view-cell {
+    font-size: 42px; }
+
+.ccui-m-index .ccui-table-view-cell:after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0.4rem;
+  height: 1px;
+  content: '';
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  background-color: #8d8d8d; }
+
+.ccui-m-index .ccui-table-view-cell:before {
+  position: absolute;
+  content: "\E601";
+  right: 0.4rem;
+  font-size: 14px;
+  line-height: 1.5; }
+  [data-dpr="2"] .ccui-m-index .ccui-table-view-cell:before {
+    font-size: 28px; }
+  [data-dpr="3"] .ccui-m-index .ccui-table-view-cell:before {
+    font-size: 42px; }
