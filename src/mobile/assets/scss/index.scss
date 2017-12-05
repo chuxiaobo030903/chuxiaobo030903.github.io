@@ -1,0 +1,42 @@
+@import "../../base/mixin_base.scss";
+
+.ccui-m-index{
+
+  .ccui-header{
+    height: px2rem(90);
+    line-height: px2rem(90);
+    @include font-size(36);
+    background-color: #efeff4;
+    text-align: center;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    -webkit-box-shadow: 0 1px 6px #ccc;
+    box-shadow: 0 1px 6px #ccc;
+  }
+  .ccui-table-view-cell{
+    position: relative;
+    padding: px2rem(20) px2rem(30);
+    @include font-size(28);
+    overflow: hidden;
+  }
+  .ccui-table-view-cell:after{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: px2rem(30);
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #8d8d8d;
+  }
+  .ccui-table-view-cell:before{
+    position: absolute;
+    content: "\e601";
+    right:px2rem(30);
+    @include font-size(28);
+    line-height: 1.5;
+  }
+}

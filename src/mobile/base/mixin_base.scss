@@ -1,0 +1,41 @@
+@function px2rem($px) {
+  @return ($px/75) * 1rem;
+}
+
+@mixin font-size($font-size) {
+  font-size: $font-size / 2 * 1px;
+
+  [data-dpr="2"] & {
+    font-size: $font-size * 1px;
+  }
+
+  [data-dpr="3"] & {
+    font-size: $font-size / 2 * 3 * 1px;
+  }
+}
+
+.font-12px{@include font-size(24);}
+.font-14px{@include font-size(28);}
+.font-16px{@include font-size(32);}
+.font-18px{@include font-size(36);}
+.font-24px{@include font-size(48);}
+
+.ccui-wrap{
+  /* 绝对定位，进行内部滚动 */
+  position: absolute;
+  z-index: 1;
+  top: px2rem(90);
+  bottom: 0;
+  overflow-x: hidden;
+  /* 增加该属性，可以增加弹性 */
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  width: 100%;
+  -webkit-box-shadow: 0 1px 6px #ccc;
+  box-shadow: 0 1px 6px #ccc;
+}
+.ccui-wrap .ccui-content {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}

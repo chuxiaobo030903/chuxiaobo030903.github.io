@@ -48,12 +48,14 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './index.html',
             filename: 'index.html',
+            title: 'Ccui',
             inject:false,  //所有静态资源css和JavaScript都不会自动注入到模板文件中，此处我们手动在html中添加
             //chunks: ['pc'],
         }),
         new HtmlWebpackPlugin({
             template: './mobile.html',
             filename: 'mobile.html',
+            title: '移动端',
             inject:false,
             //chunks: ['mobile'],
         }),

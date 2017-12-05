@@ -1,0 +1,308 @@
+@charset "utf-8";
+/* 对于基础CSS类库的代码重构必须要兼容auicss样式和apicloud样式，以及其他一些重要第三方组件的样式消除兼容性问题。 */
+html *{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+form,fieldset,textarea,p,th,td {padding:0px; margin:0px;}
+fieldset {border: 0px solid #c0c0c0;}
+textarea,input{
+    -webkit-user-select: text;
+    border:none;
+}
+
+address,caption,cite,code,dfn,em,strong,th,var{ font-style:normal;}
+ul,li,dl,dt,ol,u,dd { list-style:none; padding:0px; margin:0px;}
+caption,th{text-align: left;}
+h1,h2,h3,h4,h5,h6 {font-weight:normal; margin:0px; padding:0px; }
+q:before, q:after {content:'';}
+body{-webkit-text-size-adjust:none;font-family:Arial,Helvetica,sans-serif;font-family:"微软雅黑"; margin:0px; padding:0px; color:rgb(45, 45, 45);
+    background-color: #ffffff;height: 100%;
+}
+a{ color:rgb(45, 45, 45); text-decoration:none;}
+a:hover,a:active{ text-decoration:none;}
+/*自己定义的头部标签属性*/
+/*header{*/
+    /*!*position: fixed;*!*/
+    /*!*z-index: 1000;*!*/
+    /*!*left: 0;*!*/
+    /*!*right: 0;*!*/
+    /*!*top: 0;*!*/
+    /*padding-top:25px;*/
+    /*line-height: 45px;*/
+    /*color: white;*/
+    /*font-size: 1.2em;*/
+    /*background-color: #AAC346;*/
+    /*text-align: center;*/
+    /*!*如果右边没有图标需添加下面的属性*!*/
+    /*!*padding-right: 45px;*!*/
+/*}*/
+/*.xheader-btn{*/
+    /*width: 45px;*/
+    /*color: white;*/
+/*}*/
+/*!*自己定义的底部标签属性*!*/
+/*footer{*/
+    /*background-color: #f7f7f7;*/
+    /*position: fixed;*/
+    /*height:50px;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*color: #ffffff;*/
+    /*text-align: center;*/
+/*}*/
+
+/*解决ios,安卓 兼容性问题*/
+input,form,select,textarea,button{border-radius: 0px;-webkit-appearance:none;padding: 0;outline: none;margin: 0;background-color: transparent;}
+img {border: 0 none;font-size: 0;display: block;vertical-align:middle;}
+
+/*注意:在用xbox PC端下布局时在火狐浏览器下如果用到此ＭＳＰゴシック字体，*/
+/*必须要在字体后面加上"ＭＳＰゴシック" !important 调整优先级*/
+
+/*布局公共CSS类*/
+.xbox
+{
+    /* Webkit: collapse white-space between units 去掉IE10以下布局都不可以用*/
+    letter-spacing: -0.31em;
+    *letter-spacing: normal; /* reset IE < 8 */
+    *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
+    text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+    /* IE10 uses display: flexbox */
+    display: -ms-flexbox;
+    -ms-flex-flow: row wrap;
+}
+.xbox-1,.xbox-1-2,.xbox-1-3,.xbox-2-3,.xbox-1-4,.xbox-3-4,.xbox-1-5,.xbox-2-5,.xbox-3-5,.xbox-4-5,.xbox-1-6,.xbox-5-6,
+.xbox-11-24,.xbox-13-24,.xbox-7-12,.xbox-5-12,.xbox-1-8,.xbox-3-8,.xbox-5-8,.xbox-7-8,.xbox-1-24,.xbox-1-12,.xbox-7-24
+{display: inline-block;*display: inline;zoom: 1;letter-spacing: normal;word-spacing: normal;
+    vertical-align: top;/*设置元素的垂直对齐文本的顶部 */
+    text-rendering: auto;}
+.xbox-1{width: 100%;}
+.xbox-1-2{width: 50%;*width: 49.9690%;}
+.xbox-1-3{width: 33.3333%;*width: 33.3023%;}
+.xbox-2-3{width: 66.6667%;*width: 66.6357%;}
+.xbox-1-4{width: 25%;*width: 24.9690%;}
+.xbox-3-4{width: 75%;*width: 74.9690%;}
+.xbox-1-5{width: 20%;*width: 19.9690%;}
+.xbox-2-5{width: 40%;*width: 39.9690%;}
+.xbox-3-5{width: 60%;*width: 59.9690%;}
+.xbox-4-5{ width: 80%;*width: 79.9690%;}
+.xbox-1-6{width: 16.6667%;*width: 16.6357%;}
+.xbox-5-6{ width: 83.3333%;*width: 83.3023%;}
+.xbox-11-24 {width: 45.8333%;*width: 45.8023%;}
+.xbox-13-24 {width: 54.1667%;*width: 54.1357%;}
+.xbox-5-12{width: 41.6667%;*width: 41.6357%;}
+.xbox-7-12{width: 58.3333%;*width: 58.3023%;}
+.xbox-1-8{width: 12.5000%;*width: 12.4690%;}
+.xbox-3-8{width: 37.5000%;*width: 37.4690%;}
+.xbox-7-8{width: 87.5000%;*width: 87.4690%;}
+.xbox-5-8{width: 62.5000%;*width: 62.4690%;}
+.xbox-1-24 {width: 4.1667%;*width: 4.1357%;}
+.xbox-1-12{width: 8.3333%;*width: 8.3023%;}
+.xbox-7-24{ width: 29.1667%;*width: 29.1357%;}
+
+/*文本超出省略*/
+.textoverflow {text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+/*删除线*/
+.td{text-decoration: line-through;}
+.xhide{display: none}
+.xshow{display: block}
+.tc{text-align: center;}
+.tr{text-align:right;}
+.lb{display:inline-block;}
+.tl{text-align:left;}
+.fl{float: left}
+.fr{float: right}
+.fb{font-weight: bold}
+.xfont{font-size: 1em}
+.xfont1-2{font-size: 1.2em}
+.xfont0-9{font-size: 0.9em}
+.xfont0-8{font-size: 0.8em}
+.xfont0-7{font-size: 0.7em}
+.xfont0-6{font-size: 0.6em}
+.mm{margin: auto 0}
+.mc{margin: 0 auto }
+
+
+.ml5{margin-left:5px} .ml10{margin-left:10px} .ml15{margin-left:15px} .ml20{margin-left:20px} .ml30{margin-left:30px}
+.mr5{margin-right: 5px} .mr10{margin-right: 10px} .mr15{margin-right: 15px} .mr20{margin-right: 20px} .mr30{margin-right: 30px}
+.mt5{margin-top: 5px} .mt10{margin-top: 10px} .mt15{margin-top: 15px} .mt20{margin-top: 20px} .mt30{margin-top: 30px}
+.mb5{margin-bottom: 5px} .mb10{margin-bottom:10px} .mb15{margin-bottom: 15px} .mb20{margin-bottom:20px} .mb30{margin-bottom:30px}
+
+
+.pl5{padding-left: 5px} .pl10{padding-left:10px} .pl15{padding-left: 15px} .pl20{padding-left: 20px} .pl30{padding-left: 30px}
+.pr5{padding-right: 5px} .pr10{padding-right:10px} .pr15{padding-right: 15px} .pr20{padding-right: 20px} .pr30{padding-right: 30px}
+.pt5{padding-top: 5px} .pt10{padding-top:10px} .pt15{padding-top: 15px} .pt20{padding-top:20px} .pt30{padding-top: 30px}
+.pb5{padding-bottom: 5px} .pb10{padding-bottom: 10px} .pb15{padding-bottom: 15px} .pb20{padding-bottom: 20px} .pb30{padding-bottom:30px}
+
+
+.xwrap{
+    /* 绝对定位，进行内部滚动 */
+    position: absolute;
+    z-index: 1;
+    top: 70px;
+    bottom: 45px;
+    overflow-x: hidden;
+    /* 增加该属性，可以增加弹性 */
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    width: 100%;
+}
+.xwrap .xcontent {
+    height: 100%;
+    font-size: 1.0em;
+    width: 100%;
+    position: absolute;
+}
+/*纵向(垂直)弹性盒子*/
+.ccui-row-box{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-flex-flow: column;
+    flex-flow: column;
+    height: 100%;
+}
+/*横向(水平)弹性盒子*/
+.ccui-col-box{
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-flow: row;
+    flex-flow: row;
+}
+.ccui-flex{
+    flex: 1;
+    -webkit-flex: 1;
+    -webkit-box-flex: 1;
+}
+.w100{width:100%;}
+.w50{width:50%;}
+
+/***input单选框 隐藏原有样式 用字体图标替换****/
+.selectradio[type=radio]::before {
+    font-family: "iconfont" !important;
+    font-size: 1.2em;
+    color: #aac346;
+    content: '\e661';
+    vertical-align: middle;
+}
+.selectradio[type=radio]:checked:before {
+    font-size: 1.2em;
+    color: #aac346;
+    content: '\e662';
+    vertical-align: middle;
+}
+
+/***input单选框箭头样式 隐藏原有样式 用字体图标替换****/
+.selectradio-check[type=radio]::before {
+    font-family: "iconfont" !important;
+    font-size: 1.2em;
+    color: #aac346;
+    content: '\e680';
+    vertical-align: middle;
+}
+.selectradio-check[type=radio]:checked:before {
+    font-size: 1.2em;
+    color: #aac346;
+    content: '\e681';
+    vertical-align: middle;
+}
+
+
+/***input复选框 隐藏原有样式 用字体图标替换****/
+.selectcheckbox[type=checkbox]::before {
+    font-family: "iconfont" !important;
+    font-size: 1.2em;
+    color: #aac346;
+    content: '\e661';
+    vertical-align: middle;
+}
+.selectcheckbox[type=checkbox]:checked:before {
+    font-size: 1.2em;
+    color: #aac346;
+    content: '\e662';
+    vertical-align: middle;
+}
+
+
+/*switch开关*/
+/*例:<input type="checkbox" class="xswitch fr" checked>*/
+.xswitch {
+    width: 46px;
+    height: 26px;
+    margin: 0 10px;
+    position: relative;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    border-radius: 13px;
+    background-clip: content-box;
+    display: inline-block;
+    -webkit-appearance: none;
+    user-select: none;
+    outline: none;
+    transition: border cubic-bezier(0, 0, 0, 1) 0.2s,
+    box-shadow cubic-bezier(0, 0, 0, 1) 0.2s;
+}
+.xswitch:before {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 13px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    content: '';
+    transition: left 0.2s;
+}
+.xswitch:checked {
+    border-color: #aac346;
+    box-shadow: #aac346 0 0 0 26px inset;
+    background-color: #aac346;
+    transition: border ease 0.2s,
+    box-shadow ease 0.2s,
+    background-color ease 0.6s;
+}
+.xswitch:checked:before {
+    left: 20px;
+    transition: left 0.2s;
+}
+/*复选框按钮样式自定义*/
+.xselect-checkbox[type=checkbox]::before {
+    font-family: "iconfont" !important;
+    font-size: 20px;
+    color: #aac346;
+    content: '\e680';
+    vertical-align: middle;
+    vertical-align: inherit;
+}
+.xselect-checkbox[type=checkbox]:checked:before {
+    font-size: 20px;
+    color: #aac346;
+    content: '\e681';
+    vertical-align: middle;
+    vertical-align: inherit;
+}
+
+
+/*腾讯移动端下1px问题解决方法*/
+.border-1px {
+    position: relative;
+}
+.border-1px:after {
+    position: absolute;
+    content: '';
+    top: -50%;
+    bottom: -50%;
+    left: -50%;
+    right: -50%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
