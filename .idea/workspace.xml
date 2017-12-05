@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f2f8271-249e-491d-afe8-c063fd208365" name="Default" comment="" />
+    <list default="true" id="4f2f8271-249e-491d-afe8-c063fd208365" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mobile/assets/scss/index.scss" afterPath="$PROJECT_DIR$/src/mobile/assets/scss/index.scss" />
+    </list>
     <ignored path="ccui.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -36,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/src/mobile/index.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-7.2">
-              <caret line="9" column="87" selection-start-line="9" selection-start-column="87" selection-end-line="9" selection-end-column="87" />
+              <caret line="9" column="87" selection-start-line="7" selection-start-column="20" selection-end-line="9" selection-end-column="87" />
               <folding />
             </state>
           </provider>
@@ -45,8 +47,8 @@
       <file leaf-file-name="index.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mobile/assets/scss/index.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6942149">
-              <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.29752067">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -158,8 +160,8 @@
         <option value="$PROJECT_DIR$/src/mobile/base/mixin_base.scss" />
         <option value="$PROJECT_DIR$/src/mobile/base/m_base.css" />
         <option value="$PROJECT_DIR$/mobile.html" />
-        <option value="$PROJECT_DIR$/src/mobile/assets/scss/index.scss" />
         <option value="$PROJECT_DIR$/src/mobile/index.vue" />
+        <option value="$PROJECT_DIR$/src/mobile/assets/scss/index.scss" />
       </list>
     </option>
   </component>
@@ -888,15 +890,15 @@
     <entry file="file://$PROJECT_DIR$/src/mobile/index.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.2">
-          <caret line="9" column="87" selection-start-line="9" selection-start-column="87" selection-end-line="9" selection-end-column="87" />
+          <caret line="9" column="87" selection-start-line="7" selection-start-column="20" selection-end-line="9" selection-end-column="87" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mobile/assets/scss/index.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6942149">
-          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.29752067">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding />
         </state>
       </provider>
