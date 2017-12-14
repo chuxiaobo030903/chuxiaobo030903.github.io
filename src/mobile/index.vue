@@ -1,10 +1,10 @@
 <template>
     <div class="ccui-m-index">
         <header class="ccui-header font-36px ">Hello Ccui</header>
-        <div class="ccui-wrap">
-            <div class="ccui-content">
+        <div class="ccui-xwrap">
+            <div class="ccui-xcontent">
                 <ul>
-                    <li class="ccui-iconfont ccui-table-view-cell"><a >仿淘宝demo</a></li>
+                    <li class="ccui-iconfont ccui-table-view-cell"><router-link class="ccui-xshow" :to="{ path: '/cart'}">仿淘宝demo</router-link></li>
                     <li class="ccui-iconfont ccui-table-view-cell"><a >仿淘宝demo</a></li>
                     <li class="ccui-iconfont ccui-table-view-cell"><a >仿淘宝demo</a></li>
                     <li class="ccui-iconfont ccui-table-view-cell"><a >仿淘宝demo</a></li>

@@ -1,0 +1,258 @@
+@import "../../base/mixin_base.scss";
+//禁用长按选中文本功能
+*{
+  -webkit-touch-callout:none;  /*系统默认菜单被禁用*/
+  -webkit-user-select:none; /*webkit浏览器*/
+  -khtml-user-select:none; /*早期浏览器*/
+  -moz-user-select:none;/*火狐*/
+  -ms-user-select:none; /*IE10*/
+  user-select:none;
+}
+.ccui-m-cart{
+
+  .ccui-header{
+    height: px2rem(90);
+    line-height: px2rem(90);
+    @include font-size(28);
+    background-color: white;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+  }
+  .ccui-btn{
+    width: px2rem(90);
+    height: px2rem(90);
+  }
+  //商品标题
+  .ccui-goods-list{
+    position: relative;
+    overflow: hidden;
+
+  }
+  .ccui-goods-list:after{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #8d8d8d;
+  }
+  .ccui-goods-list .ccui-vendor-title{
+    left: 0px;
+    position: relative;
+    background-color: white;
+    margin-top: px2rem(20);
+  }
+  .ccui-goods-list .ccui-vendor-select{
+    height:px2rem(90);
+    width:px2rem(90);
+    line-height: px2rem(90);
+    text-align: center;
+    position: absolute;
+    left: 0px;
+  }
+  .ccui-shixinduigou{
+    color: #fe6117;
+  }
+  .ccui-yuanquan{
+    color: #cccccc;
+  }
+  .ccui-goods-list .ccui-vendor-edit {
+    width: px2rem(90);
+    height: px2rem(90);
+    line-height: px2rem(90);
+    position: absolute;
+    right: 0;
+  }
+  .ccui-goods-list .ccui-vendor-name {
+    margin: 0 px2rem(90);
+    height: px2rem(90);
+    line-height: px2rem(90);
+  }
+
+  .ccui-goods-content {
+    padding: px2rem(20) px2rem(20) px2rem(20) px2rem(300);
+    height: px2rem(190);
+    background-color: #fff;
+    position: relative;
+    z-index: 90;
+  }
+
+  .ccui-goods-content .ccui-goods-checkbox {
+    position: absolute;
+    left: 0px;
+    width:px2rem(90);
+    height:px2rem(190);
+    line-height: px2rem(190);
+
+  }
+  .ccui-goods-content .ccui-goods-img {
+    position: absolute;
+    left: px2rem(90);
+    width: px2rem(190);
+    height: px2rem(190);
+  }
+  .ccui-goods-content .ccui-goods-info{
+    //position: absolute;
+    //left: 148px;
+    //right: 15px;
+  }
+  .ccui-goods-content .ccui-goods-name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: px2rem(36);
+  }
+
+  .ccui-goods-content .ccui-goods-genre {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-height: px2rem(36);
+    color: #a0a0a0;
+  }
+
+  .ccui-goods-content .ccui-goods-price {
+    line-height: px2rem(55);
+    margin-top: px2rem(15);
+  }
+
+  .ccui-goods-content .ccui-goods-cost {
+    color: #fe6117;
+  }
+
+  .ccui-goods-content .ccui-goods-old {
+    color: #a0a0a0;
+    text-decoration: line-through;
+  }
+  .ccui-goods-content .ccui-goods-number-btn {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius:3px;
+  }
+  .ccui-goods-content .ccui-goods-number-btn i{
+    line-height: 1.8;
+  }
+
+  .ccui-goods-content .ccui-goods-reduce-btn{
+    width: 30px;
+    height:29px;
+  }
+  .ccui-goods-content .ccui-goods-input-btn{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+  .ccui-goods-content .ccui-goods-input-btn input{
+    padding: 6px 0px;
+    width: 100%;
+    background-color: #ffffff;
+    color: rgb(45, 45, 45);
+
+  }
+  .ccui-goods-content .ccui-goods-add-btn{
+    width: 30px;
+    height: 29px;
+  }
+
+  .ccui-transform{
+    -webkit-transition: -webkit-transform 200ms ease;
+    transition:transform 200ms ease;
+    transform:translate(- px2rem(120), 0px);
+    -ms-transform:translate(- px2rem(120), 0px); /* Internet Explorer */
+    -moz-transform:translate(- px2rem(120), 0px); /* Firefox */
+    -webkit-transform:translate(- px2rem(120), 0px); /* Safari 和 Chrome */
+    -o-transform:translate(- px2rem(120), 0px); /* Opera */
+  }
+  .ccui-transto{
+    -webkit-transition: -webkit-transform 200ms ease;
+    transition:transform 200ms ease;
+    transform:translate(0px, 0px);
+    -ms-transform:translate(0px, 0px); /* Internet Explorer */
+    -moz-transform:translate(0px, 0px); /* Firefox */
+    -webkit-transform:translate(0px, 0px); /* Safari 和 Chrome */
+    -o-transform:translate(0px, 0px); /* Opera */
+  }
+  .ccui-del{
+    position: absolute;
+    right:0px;
+    @include font-size(28);
+    background-color: red;
+    width:px2rem(120);
+    color: #fff;
+    line-height:px2rem(230);
+  }
+  .ccui-del-open{
+    -webkit-transition: -webkit-transform 10ms ease;
+    transition:transform 10ms ease;
+    height: px2rem(230);
+  }
+  .ccui-empty{
+    font-size: 3em;
+    color: #a0a0a0;
+    background-color: #ffffff;
+  }
+
+  .ccui-content-footer{
+    height: px2rem(157);
+  }
+//  底部
+  .ccui-cart-footer{
+    position: fixed;
+    width: 100%;
+    height: px2rem(97);
+    background-color: #ffffff;
+    bottom: 0;
+    z-index: 999;
+  }
+  .ccui-cart-footer .ccui-all-btn{
+     width:px2rem(90);
+     height: px2rem(97);
+     line-height: px2rem(97);
+   }
+  .ccui-cart-footer .ccui-all-select{
+    line-height: px2rem(92);
+  }
+
+  .ccui-cart-footer .ccui-jiesuan-btn{
+    width: px2rem(170);
+    height: px2rem(97);
+    line-height: px2rem(97);
+    color: white;
+    background-color: #fe6117;
+    margin-left: px2rem(20);
+    @include font-size(28);
+  }
+
+  .ccui-cart-footer .ccui-cost {
+    color: #fe6117;
+    @include font-size(28);
+  }
+
+}
+.xui-have {
+  color: #a0a0a0;
+}
+.icon-shixinduigou{
+  color: #fe6117;
+  font-size: 1.2em;
+  line-height: 42px;
+}
+.icon-yuanquan{
+  color: #cccccc;
+  font-size: 1.2em;
+  line-height: 42px;
+}
+

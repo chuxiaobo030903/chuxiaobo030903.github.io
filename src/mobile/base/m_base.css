@@ -104,8 +104,8 @@ img {border: 0 none;font-size: 0;display: block;vertical-align:middle;}
 .textoverflow {text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
 /*删除线*/
 .td{text-decoration: line-through;}
-.xhide{display: none}
-.xshow{display: block}
+.ccui-xhide{display: none}
+.ccui-xshow{display: block}
 .tc{text-align: center;}
 .tr{text-align:right;}
 .lb{display:inline-block;}
@@ -152,31 +152,6 @@ img {border: 0 none;font-size: 0;display: block;vertical-align:middle;}
     font-size: 1.0em;
     width: 100%;
     position: absolute;
-}
-/*纵向(垂直)弹性盒子*/
-.ccui-row-box{
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-flex-flow: column;
-    flex-flow: column;
-    height: 100%;
-}
-/*横向(水平)弹性盒子*/
-.ccui-col-box{
-    width: 100%;
-    display: flex;
-    display: -webkit-flex;
-    display: -webkit-box;
-    -webkit-box-orient: horizontal;
-    -webkit-flex-flow: row;
-    flex-flow: row;
-}
-.ccui-flex{
-    flex: 1;
-    -webkit-flex: 1;
-    -webkit-box-flex: 1;
 }
 .w100{width:100%;}
 .w50{width:50%;}

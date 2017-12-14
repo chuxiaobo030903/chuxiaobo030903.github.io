@@ -1,7 +1,7 @@
+$baseFontSize :75;
 @function px2rem($px) {
-  @return ($px/75) * 1rem;
+  @return $px/$baseFontSize * 1rem;
 }
-
 @mixin font-size($font-size) {
   font-size: $font-size / 2 * 1px;
 
@@ -14,13 +14,50 @@
   }
 }
 
-.font-12px{@include font-size(24);}
-.font-14px{@include font-size(28);}
-.font-16px{@include font-size(32);}
-.font-18px{@include font-size(36);}
-.font-24px{@include font-size(48);}
+@mixin border($color,$borderRadius,$borderWidth,$zIndex) {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    border-style:solid;
+    border-color:$color;
+    border-width:$borderWidth;
+    border-radius:$borderRadius;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+    -o-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: $zIndex;
+    pointer-events: none;
+  }
+}
 
-.ccui-wrap{
+.ccui-xfont24{@include font-size(24);}
+.ccui-xfont28{@include font-size(28);}
+.ccui-xfont32{@include font-size(32);}
+.ccui-xfont36{@include font-size(36);}
+.ccui-xfont48{@include font-size(48);}
+
+.pl10{padding-left: px2rem(20)}
+.pr10{padding-right: px2rem(20)}
+.pr15{padding-right: px2rem(30)}
+.pl15{padding-left: px2rem(30)}
+.ml5{margin-left: px2rem(10)}
+.mr5{margin-right: px2rem(10)}
+
+.ccui-xwrap{
   /* 绝对定位，进行内部滚动 */
   position: absolute;
   z-index: 1;
@@ -34,8 +71,33 @@
   -webkit-box-shadow: 0 1px 6px #ccc;
   box-shadow: 0 1px 6px #ccc;
 }
-.ccui-wrap .ccui-content {
+.ccui-xwrap .ccui-xcontent {
   height: 100%;
   width: 100%;
   position: absolute;
+}
+/*纵向(垂直)弹性盒子*/
+.ccui-xrow-box{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  height: 100%;
+}
+/*横向(水平)弹性盒子*/
+.ccui-xcol-box{
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-flow: row;
+  flex-flow: row;
+}
+.ccui-xflex{
+  flex: 1;
+  -webkit-flex: 1;
+  -webkit-box-flex: 1;
 }

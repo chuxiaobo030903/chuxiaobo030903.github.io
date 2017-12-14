@@ -71,6 +71,7 @@ module.exports = {
             'vue': 'vue/dist/vue.js',
             'src': path.resolve(__dirname, './src/pc'),
             'assets': path.resolve(__dirname, './src/pc/assets'),
+            'mimgs': path.resolve(__dirname, './src/mobile/assets/imgs'),
         }
     },
     //webpack-dev-server配置
@@ -85,24 +86,24 @@ module.exports = {
     },
     devtool: '#eval-source-map'
 }
-
-if (process.env.NODE_ENV === 'production') {
-    module.exports.devtool = '#source-map'
-    // http://vue-loader.vuejs.org/en/workflow/production.html
-    module.exports.plugins = (module.exports.plugins || []).concat([
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: '"production"'
-            }
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            sourceMap: true,
-            compress: {
-                warnings: false
-            }
-        }),
-        new webpack.LoaderOptionsPlugin({
-            minimize: true
-        })
-    ])
-}
+//
+//if (process.env.NODE_ENV === 'production') {
+//    module.exports.devtool = '#source-map'
+//    // http://vue-loader.vuejs.org/en/workflow/production.html
+//    module.exports.plugins = (module.exports.plugins || []).concat([
+//        new webpack.DefinePlugin({
+//            'process.env': {
+//                NODE_ENV: '"production"'
+//            }
+//        }),
+//        new webpack.optimize.UglifyJsPlugin({
+//            sourceMap: true,
+//            compress: {
+//                warnings: false
+//            }
+//        }),
+//        new webpack.LoaderOptionsPlugin({
+//            minimize: true
+//        })
+//    ])
+//}
