@@ -50,12 +50,21 @@ $baseFontSize :75;
 .ccui-xfont36{@include font-size(36);}
 .ccui-xfont48{@include font-size(48);}
 
+.pt5{padding-top: px2rem(10)}
+.pl5{padding-left: px2rem(10)}
+.pr5{padding-right: px2rem(10)}
+.pb5{padding-bottom: px2rem(10)}
 .pl10{padding-left: px2rem(20)}
 .pr10{padding-right: px2rem(20)}
 .pr15{padding-right: px2rem(30)}
 .pl15{padding-left: px2rem(30)}
+.pt10{padding-top: px2rem(20)}
+.mt10{margin-top: px2rem(20)}
 .ml5{margin-left: px2rem(10)}
 .mr5{margin-right: px2rem(10)}
+
+.ccui-xhide{display: none}
+.ccui-xshow{display: block}
 
 .ccui-xwrap{
   /* 绝对定位，进行内部滚动 */

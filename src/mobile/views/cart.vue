@@ -1,8 +1,9 @@
 <template>
     <div class="ccui-m-cart">
         <header class="ccui-header tc">
-            <div class="fl tl pl15 ccui-btn ccui-iconfont ccui-fanhui ccui-xfont36"></div>
-            <div class="fr ccui-btn tr pr15">管理</div>
+            <router-link class="fl tl pl15 ccui-btn ccui-iconfont ccui-fanhui ccui-xfont36" :to="{ path: '/'}"></router-link>
+            <div v-if ="all_del_tagging" class="fr ccui-btn tr pr15" v-xevent.tap @tap="editClick()">编辑</div>
+            <div v-else class="fr ccui-btn tr pr15" v-xevent.tap @tap="complete_click()">完成</div>
             <div class="ccui-xfont36"><span>购物车</span><span>(4)</span></div>
         </header>
         <div class="ccui-xwrap" style="background-color: #e7e7e7;">
@@ -10,7 +11,7 @@
                 <div class="ccui-goods-list" v-for="(item,index) in shopping_cart_data" :key="item.id">
                     <!--商品标题-->
                     <div class="ccui-vendor-title" v-if="item.type == 'vendor'">
-                        <div class="ccui-vendor-select" v-xevent.tap @tap="vendor_checked(index)">
+                        <div class="ccui-vendor-select" v-xevent.tap @tap="cartVendorCheck(index)">
                             <i class="ccui-iconfont ccui-xfont32" :class="{ 'ccui-shixinduigou' : item.vendor_checked,'ccui-yuanquan': !item.vendor_checked}"
                                v-model="item.vendor_checked"></i>
                         </div>
@@ -26,7 +27,7 @@
                     <!--商品内容信息-->
                     <div v-else class="ccui-xcol-box">
                         <div class="ccui-goods-content  ccui-xflex "
-                             v-xevent.tap @tap="goods_click()" v-xswipe @xswipe="cart_swipe($event,index)"
+                             v-xevent.tap @tap="goods_click()" v-xswipe @xswipe="cartSwipe($event,index)"
                              :class="{'ccui-transform ': item.swipe_tagging , 'ccui-transto': !item.swipe_tagging}">
                             <!--商品选择按钮-->
                             <div class="ccui-goods-checkbox tc"
@@ -53,24 +54,29 @@
                             </div>
                             <!--商品数量编辑-->
                             <div v-else>
-                                <div class="ccui-goods-number-btn xcol-box">
+                                <div class="ccui-goods-number-btn ccui-xcol-box">
                                     <!--商品数量减少按钮-->
-                                    <div class="ccui-goods-reduce-btn" v-xevent.tap @tap="reduce(index)"><i class="ccui-iconfont ccui-jianhao"></i></div>
+                                    <div class="ccui-goods-reduce-btn" v-xevent.tap @tap="reduce(index)"><i class="ccui-xfont36 ccui-iconfont ccui-jianhao"></i></div>
                                     <!--输入框-->
-                                    <div class="ccui-goods-input-btn xflex">
-                                        <input disabled="disabled" class="tc" type="text" v-model="item.selected_item_total"/>
+                                    <div class="ccui-goods-input-btn ccui-xflex">
+                                        <input  class="tc ccui-xfont32" disabled="disabled" type="number" min="1" v-model="item.selected_item_total"/>
                                     </div>
                                     <!--商品数量添加按钮-->
-                                    <div class="ccui-goods-add-btn" v-xevent.tap @tap="add(index)"><i class="iconfont icon-jiahao1"></i></div>
+                                    <div class="ccui-goods-reduce-btn" v-xevent.tap @tap="add(index)"><i class="ccui-xfont36 ccui-iconfont ccui-jiahao"></i></div>
                                 </div>
+                                <!--商品属性-->
+                                <div class="ccui-goods-attributes-btn ccui-xcol-box mt10">
+                                            <div class="ccui-goods-genre ccui-xflex pt5 pl5 pb5">{{item.product_attributes}}</div>
+                                            <div class="pt5 pb5 pr5"><i class="ccui-xfont36 ccui-iconfont ccui-xiala"></i></div>
+                                    </div>
                             </div>
-
                         </div>
+                        <div v-show ="item.edit_tagging" class="tc ccui-goods-edit-del"v-xevent.tap @tap="del(index)">删除</div>
                         <!--商品删除按钮-->
                         <div v-if="!item.del_tagging" :class="{'ccui-del-open':item.swipe_tagging , '': !item.swipe_tagging}"
                              class="ccui-del tc" v-xevent.tap @tap="del(index)">删除
                         </div>
-                        <div v-else :class="{'ccui-del-open': item.swipe_tagging ,'': !item.swipe_tagging}" class="ccui-del tc" style="position: static;"
+                        <div v-else :class="{'ccui-del-open': item.swipe_tagging ,'': !item.swipe_tagging}" class="ccui-del tc" style="position: relative"
                              v-xevent.tap @tap="del(index)">删除
                         </div>
                     </div>
@@ -79,26 +85,27 @@
             </div>
         </div>
         <footer class="ccui-cart-footer ccui-xcol-box">
-            <div class="ccui-all-btn tc" @click="select_all">
+            <div class="ccui-all-btn tc"v-xevent.tap @tap="checkAll()">
                 <i class="ccui-xfont32 ccui-iconfont" :class="{ 'ccui-shixinduigou' : xchecked, 'ccui-yuanquan': !xchecked}" v-model="xchecked" ></i>
             </div>
             <div class="ccui-all-select ccui-xfont32">全选</div>
-            <div class="ccui-xflex ccui-all-select tr">
+            <div v-show="all_del_tagging" class="ccui-xflex ccui-all-select tr">
                 <span class="ccui-xfont28">合计 :</span>
                 <span class=" ccui-cost ml5 mr5">¥{{total}}</span>
                 <span class="ccui-xfont24 xui-have">不含运费</span>
             </div>
-            <div class="ccui-jiesuan-btn tc" @click="pay_click()">结算(0)</div>
-            <!--<div class="ccui-xflex" v-else>-->
-                <!--<div class="fr xui-btn tc" @click="del_click()" >删除</div>-->
-            <!--</div>-->
+            <div v-show="all_del_tagging" class="ccui-jiesuan-btn tc" @click="pay_click()">结算(0)</div>
+            <div v-show="!all_del_tagging" class="ccui-xflex">
+               <div style="position: absolute;right: 0;" class="ccui-jiesuan-btn tc" @click="del_click()" >删除</div>
+            </div>
         </footer>
     </div>
 </template>
 <script>
-    require('../assets/scss/cart.scss');
-    export default {
-        data:function(){
+require('../assets/scss/cart.scss');
+require('../base/js/cart.js');
+ export default {
+        data(){
             return {
                 shopping_cart_data: [
                     {
@@ -118,7 +125,7 @@
                         product_id: 10,
                         product_promotion: '满100元包邮',
                         product_title: '人本韩版休闲鞋棉麻男鞋子秋季透气低帮鞋学生板鞋运动帆布鞋男潮',
-                        product_attributes: '颜色:黑色/仿旧白;尺码:男43M',
+                        product_attributes: '颜色:黑色;尺码:M/165',
                         product_img: require("mimgs/content13-110x110.png"),
                         product_price:199,
                         product_promotion_price: 150,
@@ -215,24 +222,47 @@
                         edit_title_tagging : true,
                     },
                 ],
+                xchecked:false,
+                all_del_tagging:true,
             }
         },
-        mounted:function(){},
+ //        Vue属性计算,此处计算总价
+        computed: {
+            total: function () {
+                var total = 0;
+                for (var i = 0; i < this.shopping_cart_data.length; i++) {
+                     var self = this.shopping_cart_data[i];
+                     if (self.type == 'vendor') {
+                         continue;
+                     }
+                     if (self.checked) {
+                         total += self.selected_item_total * self.product_promotion_price;
+                     }
+                 }
+                return total;
+            }
+        },
         methods: {
+//          导航栏编辑事件
+            editClick(){
+                editAll();
+            },
 //          商家选中状态单击事件
-            vendor_checked: function (index) {
+            cartVendorCheck(index) {
+//                判断是否有元素删除开关打开
+                if (!isDelState()) {
+                    return;
+                }
                 var vm = this;
                 vm.shopping_cart_data[index].vendor_checked = !vm.shopping_cart_data[index].vendor_checked;
                 if (vm.shopping_cart_data[index].vendor_checked) {
-                    vendor_select_all(vm.shopping_cart_data[index].vendor_id,true);
-                    if (if_state()) {
-                        exec_script('xui/shop/shopping_footer.frame', 'jsfun('+ this.total + ',true)');
-                    } else {
-                        exec_script('xui/shop/shopping_footer.frame', 'jsfun('+ this.total + ')');
+                    VendorSelectAll(vm.shopping_cart_data[index].vendor_id,true);
+                    if (isState()) {
+                       vm.xchecked = true;
                     }
                 } else {
-                    vendor_select_all(vm.shopping_cart_data[index].vendor_id,false);
-                    exec_script('xui/shop/shopping_footer.frame', 'jsfun('+this.total + ',false)');
+                    VendorSelectAll(vm.shopping_cart_data[index].vendor_id,false);
+                    vm.xchecked = false;
                 }
             },
 
@@ -241,9 +271,8 @@
 //                    return;
 //                }
             },
-
 //          实现IOS左滑删除特效，安卓下无效，在此判断下设备return出去
-            cart_swipe(event, index){
+            cartSwipe(event, index){
                 var tag = 0;
 //                判断是否处于编辑状态
                 if(this.shopping_cart_data[index].edit_tagging){
@@ -278,6 +307,14 @@
                     }
                 }
             },
+
+//            全选事件
+            checkAll(){
+                selectAll();
+            }
+
+
+
         }
     }
 </script>

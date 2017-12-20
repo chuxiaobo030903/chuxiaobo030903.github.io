@@ -141,30 +141,41 @@
     z-index: 10;
     text-align: center;
     border: 1px solid #ccc;
-    border-radius:3px;
   }
+  .ccui-goods-content .ccui-goods-attributes-btn{
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    border: 1px solid #ccc;
+  }
+
+  .ccui-goods-edit-del{
+    @include font-size(28);
+    background-color: red;
+    width:px2rem(120);
+    color: #fff;
+    line-height:px2rem(230);
+  }
+
   .ccui-goods-content .ccui-goods-number-btn i{
-    line-height: 1.8;
+    line-height: px2rem(80);
   }
 
   .ccui-goods-content .ccui-goods-reduce-btn{
-    width: 30px;
-    height:29px;
+    width: px2rem(105);
+    height:px2rem(78);
   }
   .ccui-goods-content .ccui-goods-input-btn{
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
   }
   .ccui-goods-content .ccui-goods-input-btn input{
-    padding: 6px 0px;
     width: 100%;
     background-color: #ffffff;
     color: rgb(45, 45, 45);
-
-  }
-  .ccui-goods-content .ccui-goods-add-btn{
-    width: 30px;
-    height: 29px;
+    height:px2rem(80);
   }
 
   .ccui-transform{
