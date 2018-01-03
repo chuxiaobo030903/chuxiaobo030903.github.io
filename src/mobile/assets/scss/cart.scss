@@ -199,16 +199,17 @@
   .ccui-del{
     position: absolute;
     right:0px;
+    top:1px;
     @include font-size(28);
     background-color: red;
     width:px2rem(120);
     color: #fff;
-    line-height:px2rem(230);
+    line-height:px2rem(228);
   }
   .ccui-del-open{
     -webkit-transition: -webkit-transform 10ms ease;
     transition:transform 10ms ease;
-    height: px2rem(230);
+    height: px2rem(228);
   }
   .ccui-empty{
     font-size: 3em;
@@ -265,5 +266,93 @@
   color: #cccccc;
   font-size: 1.2em;
   line-height: 42px;
+}
+
+
+.mint-msgbox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  background-color: #fff;
+  width: 70%;
+  border-radius: 3px;
+  @include font-size(28);
+  -webkit-user-select: none;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+.mint-msgbox-content {
+  padding:px2rem(30);
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+.mint-msgbox-message {
+  color: #999;
+  margin: 0;
+  text-align: center;
+}
+.mint-msgbox-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: px2rem(70);
+  line-height: px2rem(70);
+}
+.mint-msgbox-btn {
+  line-height: px2rem(70);
+  @include font-size(28);
+  display: block;
+  background-color: #fff;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0;
+  border: 0;
+}
+.mint-msgbox-btn:focus {
+  outline: none;
+}
+.mint-msgbox-btn:active {
+  background-color: #fff;
+}
+.mint-msgbox-cancel {
+  width: 50%;
+  border-right: 1px solid #ddd;
+}
+.mint-msgbox-cancel:active {
+  color: #000;
+}
+.mint-msgbox-confirm {
+  color: #26a2ff;
+  width: 50%;
+}
+.mint-msgbox-confirm:active {
+  color: #26a2ff;
+}
+.msgbox-bounce-enter {
+  opacity: 0;
+  -webkit-transform: translate3d(-50%, -50%, 0) scale(0.7);
+  transform: translate3d(-50%, -50%, 0) scale(0.7);
+}
+.msgbox-bounce-leave-active {
+  opacity: 0;
+  -webkit-transform: translate3d(-50%, -50%, 0) scale(0.9);
+  transform: translate3d(-50%, -50%, 0) scale(0.9);
+}
+
+.v-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: #000;
+  z-index: 3000;
 }
 

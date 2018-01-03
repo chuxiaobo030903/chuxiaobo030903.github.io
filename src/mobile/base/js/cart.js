@@ -1,14 +1,3 @@
-//    导航栏编辑状态
-window.editAll = function(){
-    var data =__root_vue_component__.shopping_cart_data;
-    if(!isDelState()){return;}
-    data.forEach(function (item) {
-        item.edit_tagging = !item.edit_tagging;
-        item.edit_title_tagging = !item.edit_title_tagging;
-        item.del_tagging = false;
-    });
-    __root_vue_component__.all_del_tagging = !__root_vue_component__.all_del_tagging;
-};
 
 //判断是否被全部选中状态
 window.isState = function () {
@@ -111,4 +100,38 @@ window.selectAll = function () {
     }
 };
 
+//商品选中设置商家的状态
+window.productSelectAll = function (vendor_id, state) {
+    var data = __root_vue_component__.shopping_cart_data;
+    var count = 0;
+    var checked_count = 0;
+//        计算出当前商家下商品总数
+    for (var i = 0; i < data.length; i++) {
+        if (data[i].type == 'vendor') {
+            continue;
+        } else {
+            if (data[i].vendor_id == vendor_id) {
+                count++;
+            }
+            //        计算当前商家下有多少商品被选中数
+            if (data[i].vendor_id == vendor_id && data[i].checked == true) {
+                checked_count++;
+            }
+        }
+    }
+//      设置商家选中状态
+    for (var i = 0; i < data.length; i++) {
+        if (data[i].vendor_id == vendor_id && data[i].type == 'vendor') {
+            if (state) {
+                if (checked_count == count) {
+                    data[i].vendor_checked = true;
+                }
+                return;
+            } else {
+                data[i].vendor_checked = false;
+                return;
+            }
+        }
+    }
 
+};

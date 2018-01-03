@@ -248,17 +248,17 @@ img {border: 0 none;font-size: 0;display: block;vertical-align:middle;}
 }
 /*复选框按钮样式自定义*/
 .xselect-checkbox[type=checkbox]::before {
-    font-family: "iconfont" !important;
+    font-family: "ccui-iconfont" !important;
     font-size: 20px;
     color: #aac346;
-    content: '\e680';
+    content: "\e703";
     vertical-align: middle;
     vertical-align: inherit;
 }
 .xselect-checkbox[type=checkbox]:checked:before {
     font-size: 20px;
     color: #aac346;
-    content: '\e681';
+    content: "\e755";
     vertical-align: middle;
     vertical-align: inherit;
 }

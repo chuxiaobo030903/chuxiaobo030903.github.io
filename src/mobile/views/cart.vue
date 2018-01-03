@@ -3,7 +3,7 @@
         <header class="ccui-header tc">
             <router-link class="fl tl pl15 ccui-btn ccui-iconfont ccui-fanhui ccui-xfont36" :to="{ path: '/'}"></router-link>
             <div v-if ="all_del_tagging" class="fr ccui-btn tr pr15" v-xevent.tap @tap="editClick()">编辑</div>
-            <div v-else class="fr ccui-btn tr pr15" v-xevent.tap @tap="complete_click()">完成</div>
+            <div v-else class="fr ccui-btn tr pr15" v-xevent.tap @tap="editComplete()">完成</div>
             <div class="ccui-xfont36"><span>购物车</span><span>(4)</span></div>
         </header>
         <div class="ccui-xwrap" style="background-color: #e7e7e7;">
@@ -16,29 +16,28 @@
                                v-model="item.vendor_checked"></i>
                         </div>
                         <div v-show="item.edit_title_tagging">
-                            <div v-if="!item.edit_tagging" v-xevent.tap @tap="edit_click(item.vendor_id)"
+                            <div v-if="!item.edit_tagging" v-xevent.tap @tap="editVendor(item.vendor_id)"
                                  class="tr pr15 ccui-vendor-edit">编辑
                             </div>
-                            <div v-else v-xevent.tap @tap="edit_click(item.vendor_id)" class="tr pr15 ccui-vendor-edit">完成</div>
+                            <div v-else v-xevent.tap @tap="editCompleteVendor(item.vendor_id)" class="tr pr15 ccui-vendor-edit">完成</div>
                         </div>
-                        <div v-xevent.tap @tap="vendor_click(item.vendor_id)" class="ccui-vendor-name">{{item.vendor_name}}<i
+                        <div v-xevent.tap @tap="gotoVendor(item.vendor_id)" class="ccui-vendor-name">{{item.vendor_name}}<i
                                 class="ccui-xfont24 ccui-iconfont ccui-gengduo ml5"></i></div>
                     </div>
                     <!--商品内容信息-->
                     <div v-else class="ccui-xcol-box">
-                        <div class="ccui-goods-content  ccui-xflex "
-                             v-xevent.tap @tap="goods_click()" v-xswipe @xswipe="cartSwipe($event,index)"
+                        <div class="ccui-goods-content  ccui-xflex " v-xswipe @xswipe="cartSwipe($event,index)"
                              :class="{'ccui-transform ': item.swipe_tagging , 'ccui-transto': !item.swipe_tagging}">
                             <!--商品选择按钮-->
                             <div class="ccui-goods-checkbox tc"
-                                 v-xevent.tap @tap="goods_checked(index)">
+                                 v-xevent.tap @tap="goodsChecked(index)">
                                 <i class="ccui-iconfont ccui-xfont32" :class="{ 'ccui-shixinduigou' :item.checked, 'ccui-yuanquan': !item.checked}"
                                    v-model="item.checked"></i>
                             </div>
                             <!--商品图片-->
-                            <img class="ccui-goods-img" :src="item.product_img">
+                            <img class="ccui-goods-img" :src="item.product_img" v-xevent.tap @tap="gotoVendor(item.vendor_id)">
 
-                            <div v-if="!item.edit_tagging" class="ccui-goods-info">
+                            <div v-if="!item.edit_tagging" class="ccui-goods-info" v-xevent.tap @tap="gotoVendor(item.vendor_id)">
                                 <!--商品名称-->
                                 <div class="ccui-goods-name">{{item.product_title}}</div>
                                 <!--商品规格-->
@@ -71,16 +70,17 @@
                                     </div>
                             </div>
                         </div>
-                        <div v-show ="item.edit_tagging" class="tc ccui-goods-edit-del"v-xevent.tap @tap="del(index)">删除</div>
+                        <div v-show ="item.edit_tagging" class="tc ccui-goods-edit-del" v-xevent.tap @tap="del(index)">删除</div>
                         <!--商品删除按钮-->
                         <div v-if="!item.del_tagging" :class="{'ccui-del-open':item.swipe_tagging , '': !item.swipe_tagging}"
-                             class="ccui-del tc" v-xevent.tap @tap="del(index)">删除
+                             class="ccui-del tc" @click="del(index)">删除
                         </div>
                         <div v-else :class="{'ccui-del-open': item.swipe_tagging ,'': !item.swipe_tagging}" class="ccui-del tc" style="position: relative"
                              v-xevent.tap @tap="del(index)">删除
                         </div>
                     </div>
                 </div>
+                <input type="checkbox" class="xswitch">
                 <div class="ccui-content-footer"></div>
             </div>
         </div>
@@ -101,9 +101,12 @@
         </footer>
     </div>
 </template>
+
 <script>
+import { MessageBox } from 'mint-ui';
 require('../assets/scss/cart.scss');
 require('../base/js/cart.js');
+
  export default {
         data(){
             return {
@@ -226,7 +229,7 @@ require('../base/js/cart.js');
                 all_del_tagging:true,
             }
         },
- //        Vue属性计算,此处计算总价
+ //        Vue属性计算,此处计算总价methods
         computed: {
             total: function () {
                 var total = 0;
@@ -245,9 +248,51 @@ require('../base/js/cart.js');
         methods: {
 //          导航栏编辑事件
             editClick(){
-                editAll();
+                var data = this.shopping_cart_data;
+                if(!isDelState()){return;}
+                data.forEach(function (item) {
+                    item.edit_tagging = true;
+                    item.edit_title_tagging = false;
+                    item.del_tagging = false;
+                });
+                this.all_del_tagging = false;
             },
-//          商家选中状态单击事件
+            editComplete(){
+                var data = this.shopping_cart_data;
+                if(!isDelState()){return;}
+                data.forEach(function (item) {
+                    item.edit_tagging = false;
+                    item.edit_title_tagging = true;
+                    item.del_tagging = false;
+                });
+                this.all_del_tagging = true;
+            },
+            editVendor(vendor_id) {
+                var vm = this;
+                if(!isDelState()){return;}
+                vm.shopping_cart_data.forEach(function (item) {
+                    if (item.vendor_id == vendor_id) {
+                        item.edit_tagging = true;
+                        item.del_tagging = false;
+                    }
+                });
+            },
+            editCompleteVendor(vendor_id){
+                var vm = this;
+                if(!isDelState()){return;}
+                vm.shopping_cart_data.forEach(function (item) {
+                    if (item.vendor_id == vendor_id) {
+                        item.edit_tagging = false;
+                        item.del_tagging = false;
+                    }
+                });
+            },
+
+            gotoVendor(){
+                this.$router.push({path: "/detail"});
+            },
+
+            //          商家选中状态单击事件
             cartVendorCheck(index) {
 //                判断是否有元素删除开关打开
                 if (!isDelState()) {
@@ -258,7 +303,7 @@ require('../base/js/cart.js');
                 if (vm.shopping_cart_data[index].vendor_checked) {
                     VendorSelectAll(vm.shopping_cart_data[index].vendor_id,true);
                     if (isState()) {
-                       vm.xchecked = true;
+                        vm.xchecked = true;
                     }
                 } else {
                     VendorSelectAll(vm.shopping_cart_data[index].vendor_id,false);
@@ -308,10 +353,79 @@ require('../base/js/cart.js');
                 }
             },
 
+            goodsChecked(index){
+                if (!isDelState()) {return;}
+                var vm = this;
+                vm.shopping_cart_data[index].checked = !vm.shopping_cart_data[index].checked;
+                if (vm.shopping_cart_data[index].checked) {
+                    productSelectAll(vm.shopping_cart_data[index].vendor_id, true);
+                    if (isState()) {
+                        vm.xchecked = true;
+                    } else {
+                        vm.xchecked = false;
+                    }
+                } else {
+                    productSelectAll(vm.shopping_cart_data[index].vendor_id,false);
+                    vm.xchecked = false;
+                }
+            },
+
+            add: function (index) {
+                var self = this.shopping_cart_data[index];
+                if (self.selected_item_total >= 99) {
+                    return false;
+                }
+                self.selected_item_total++;
+            },
+
+            reduce: function (index) {
+                var self = this.shopping_cart_data[index];
+                if (self.selected_item_total <= 1) {
+                    return false;
+                }
+                self.selected_item_total--;
+            },
+
+            del: function (index) {
+//                mint-ui Promises对象异步执行
+                MessageBox.confirm('确实要删除这个宝贝吗？','').then(action => {
+                        console.log(123);
+                });
+//                var vm = this;
+//                var i = 0;
+//                api.confirm({
+//                    msg: '确认要删除这个宝贝吗？',
+//                    buttons: ['确认', '取消']
+//                }, function (ret, err) {
+//                    if (ret.buttonIndex == 1) {
+//                        var vendor_id = vm.shopping_cart_data[index].vendor_id;
+//                        vm.shopping_cart_data.splice(index, 1);
+//                        vm.shopping_cart_data.forEach(function (item) {
+//                            if (item.type == 'product' && item.vendor_id == vendor_id) {
+//                                i++;
+//                            }
+//                        });
+//                        if (i == 0) {
+//                            for (var j = 0; j < vm.shopping_cart_data.length; j++) {
+//                                if (vm.shopping_cart_data[j].vendor_id == vendor_id) {
+//                                    vm.shopping_cart_data.splice(j, 1);
+//                                }
+//                            }
+//                        }
+//                        if (vm.shopping_cart_data.length == 0) {
+//                            hidden_footer();
+//                        } else {
+//                            exec_script('xui/shop/shopping_footer.frame', 'jsfun(' + vm.total + ')');
+//                        }
+//
+//                    }
+//                });
+            },
+
 //            全选事件
             checkAll(){
                 selectAll();
-            }
+            },
 
 
 

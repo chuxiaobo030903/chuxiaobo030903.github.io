@@ -16,6 +16,7 @@
 </template>
 <script>
     require('./assets/scss/index.scss');
+
     export default {
         data:function(){
             return {}

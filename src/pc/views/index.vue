@@ -72,7 +72,7 @@
         mounted:function(){
             ccui_select("ccui_select");
             console.log('已经挂载到模板上:msg变量渲染到模板');
-
+//            vue生命周期问题，jq的方法全部写到这里
         },
         updated:function(){
 

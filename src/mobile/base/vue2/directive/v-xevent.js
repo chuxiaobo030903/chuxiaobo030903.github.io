@@ -14,22 +14,6 @@ Vue.directive('xevent', {
         if (binding.modifiers.tap) {
             type = 'tap';
         }
-        //滑动事件在IOS上正常，但是在安卓设备上存在兼容性问题，以后用到再调试之。
-        //https://github.com/hammerjs/hammer.js/issues/124
-        //https://github.com/hammerjs/hammer.js/issues/402
-        //https://github.com/hammerjs/hammer.js/wiki/Event-delegation-and-how-to-stopPropagation---preventDefaults
-        //else if (binding.modifiers.swipeleft) {
-        //    type = 'swipeleft';
-        //} else if (binding.modifiers.swiperight) {
-        //    type = 'swiperight';
-        //} else if (binding.modifiers.swipeup) {
-        //    type = 'swipeup';
-        //} else if (binding.modifiers.swipedown) {
-        //    type = 'swipedown';
-        //}
-        //xassert("ztbase/vendor/vue2/directive/v-xevent.js",28,type, '无法识别的移动端扩展事件定义，请参见hammerjs文档查阅对应的期望事件并且参照v-xevent.tap指令进行扩展之。');
-
-        //@REFER http://hammerjs.github.io/getting-started/ hammerjs教程
         el.hammerjs = new Hammer(el);
         el.hammerjs.on(type, function (e) {
             //bugfix 禁止点击透传冒泡问题
@@ -38,7 +22,6 @@ Vue.directive('xevent', {
             } else {//IE浏览器
                 window.event.cancelBubble = true;
             }
-
             //模拟一个HTML的tap事件，以便于触发绑定的@tap的vue定义的methods中的方法。
             var event = document.createEvent('HTMLEvents');
             event.param = 'left';
