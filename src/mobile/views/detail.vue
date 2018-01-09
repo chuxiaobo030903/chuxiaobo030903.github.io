@@ -18,6 +18,7 @@
     import Vue from 'vue';
     require('../assets/scss/detail.scss');
     import { Swipe, SwipeItem } from 'mint-ui';
+    import { Toast } from 'mint-ui';
     Vue.component(Swipe.name, Swipe);
     Vue.component(SwipeItem.name, SwipeItem);
 
@@ -33,7 +34,11 @@
         mounted:function(){},
         methods: {
             cxb(){
-                console.log(11111111111);
+                Toast({
+                    message: '提示',
+                    position: 'middle',
+                    duration: 50000
+                });
 
             },
         }
