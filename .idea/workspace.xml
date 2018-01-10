@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f2f8271-249e-491d-afe8-c063fd208365" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pc/base/iconfont/iconfont.eot" afterPath="$PROJECT_DIR$/src/pc/base/iconfont/iconfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pc/base/iconfont/iconfont.woff" afterPath="$PROJECT_DIR$/src/pc/base/iconfont/iconfont.woff" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mobile.vue" afterPath="$PROJECT_DIR$/src/Mobile.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mobile.js" afterPath="$PROJECT_DIR$/src/mobile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mobile/assets/scss/cart.scss" afterPath="$PROJECT_DIR$/src/mobile/assets/scss/cart.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mobile/assets/scss/detail.scss" afterPath="$PROJECT_DIR$/src/mobile/assets/scss/detail.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mobile/base/iconfont/iconfont.css" afterPath="$PROJECT_DIR$/src/mobile/base/iconfont/iconfont.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mobile/base/iconfont/iconfont.ttf" afterPath="$PROJECT_DIR$/src/mobile/base/iconfont/iconfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mobile/base/mixin_base.scss" afterPath="$PROJECT_DIR$/src/mobile/base/mixin_base.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mobile/index.vue" afterPath="$PROJECT_DIR$/src/mobile/index.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mobile/views/cart.vue" afterPath="$PROJECT_DIR$/src/mobile/views/cart.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mobile/views/detail.vue" afterPath="$PROJECT_DIR$/src/mobile/views/detail.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pc/base/iconfont/iconfont.css" afterPath="$PROJECT_DIR$/src/pc/base/iconfont/iconfont.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pc/base/iconfont/iconfont.svg" afterPath="$PROJECT_DIR$/src/pc/base/iconfont/iconfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pc/base/iconfont/iconfont.ttf" afterPath="$PROJECT_DIR$/src/pc/base/iconfont/iconfont.ttf" />
     </list>
     <ignored path="ccui.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,6 +26,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
+      <file leaf-file-name="detail.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mobile/views/detail.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.4">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/mobile/assets/scss/detail.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3966942">
+              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="cart.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mobile/views/cart.vue">
           <provider selected="true" editor-type-id="text-editor">
@@ -94,31 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobile.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/mobile.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28088427">
-              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="toast.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/mint-ui/packages/toast/src/toast.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2">
-              <caret line="4" column="88" selection-start-line="4" selection-start-column="88" selection-end-line="4" selection-end-column="88" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="cart.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mobile/assets/scss/cart.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.7954545">
-              <caret line="556" column="19" selection-start-line="556" selection-start-column="19" selection-end-line="556" selection-end-column="19" />
+            <state vertical-scroll-proportion="-95.318184">
+              <caret line="556" column="0" selection-start-line="556" selection-start-column="0" selection-end-line="557" selection-end-column="0" />
               <folding>
                 <element signature="e#52#263#0" expanded="false" />
                 <element signature="e#293#475#0" expanded="false" />
@@ -285,11 +275,11 @@
         <option value="$PROJECT_DIR$/src/mobile.vue" />
         <option value="$PROJECT_DIR$/src/mobile/index.vue" />
         <option value="$PROJECT_DIR$/src/mobile/base/mixin_base.scss" />
-        <option value="$PROJECT_DIR$/src/mobile/assets/scss/detail.scss" />
-        <option value="$PROJECT_DIR$/src/mobile/views/detail.vue" />
         <option value="$PROJECT_DIR$/node_modules/mint-ui/packages/toast/src/toast.vue" />
         <option value="$PROJECT_DIR$/src/mobile/assets/scss/cart.scss" />
         <option value="$PROJECT_DIR$/src/mobile/views/cart.vue" />
+        <option value="$PROJECT_DIR$/src/mobile/views/detail.vue" />
+        <option value="$PROJECT_DIR$/src/mobile/assets/scss/detail.scss" />
       </list>
     </option>
   </component>
@@ -367,6 +357,174 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccui-github" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccui-github" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccui-github" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccui-github" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccui-github" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccui-github" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mint-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccui-github" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mint-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccui-github" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mint-ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swipe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -439,8 +597,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1932" height="1050" extended-state="1" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1932" height="1050" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -530,13 +688,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/project-alilang-refactoring/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/vue/dist/vue.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -597,13 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4864865">
           <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7142857">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -912,38 +1056,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mobile/assets/scss/detail.scss">
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24793388">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="10.372093">
+          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mobile/views/detail.vue">
+    <entry file="file://$PROJECT_DIR$/src/mobile.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.4888887">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#909#1131#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.28088427">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/mint-ui/packages/toast/src/toast.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2">
+        <state vertical-scroll-proportion="0.18725617">
           <caret line="4" column="88" selection-start-line="4" selection-start-column="88" selection-end-line="4" selection-end-column="88" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/mobile/views/cart.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.088889">
+          <caret line="578" column="0" selection-start-line="578" selection-start-column="0" selection-end-line="579" selection-end-column="0" />
+          <folding>
+            <element signature="n#header#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#header#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#footer#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#footer#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#mt-popup#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#mt-popup#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#11338#17298#0" expanded="false" />
+            <element signature="e#11419#11786#0" expanded="false" />
+            <element signature="e#11808#12908#0" expanded="false" />
+            <element signature="e#12930#13835#0" expanded="false" />
+            <element signature="e#13857#14762#0" expanded="false" />
+            <element signature="e#14784#15155#0" expanded="false" />
+            <element signature="e#15177#16083#0" expanded="false" />
+            <element signature="e#16105#17012#0" expanded="false" />
+            <element signature="e#17384#17878#0" expanded="false" />
+            <element signature="e#17942#18308#0" expanded="false" />
+            <element signature="e#18450#18818#0" expanded="false" />
+            <element signature="e#18846#19213#0" expanded="false" />
+            <element signature="e#18988#19152#0" expanded="false" />
+            <element signature="e#19249#19599#0" expanded="false" />
+            <element signature="e#19642#19993#0" expanded="false" />
+            <element signature="e#20020#20089#0" expanded="false" />
+            <element signature="e#20162#20850#0" expanded="false" />
+            <element signature="e#20890#20993#0" expanded="false" />
+            <element signature="e#21076#22644#0" expanded="false" />
+            <element signature="e#22678#23352#0" expanded="false" />
+            <element signature="e#23389#23613#0" expanded="false" />
+            <element signature="e#23653#23876#0" expanded="false" />
+            <element signature="e#23913#24844#0" expanded="false" />
+            <element signature="e#24293#24462#0" expanded="false" />
+            <element signature="e#24498#24810#0" expanded="false" />
+            <element signature="e#24876#26714#0" expanded="false" />
+            <element signature="e#25532#25568#0" expanded="false" />
+            <element signature="e#25759#25974#0" expanded="false" />
+            <element signature="e#26028#26213#0" expanded="false" />
+            <element signature="e#26253#26538#0" expanded="false" />
+            <element signature="e#26749#26808#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mint-ui/lib/swipe/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46814045">
+          <caret line="43" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="e#13#80#0" expanded="false" />
+            <element signature="e#104#171#0" expanded="false" />
+            <element signature="e#201#365#0" expanded="false" />
+            <element signature="e#405#486#0" expanded="false" />
+            <element signature="e#510#652#0" expanded="false" />
+            <element signature="e#675#822#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mobile/assets/scss/cart.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.7954545">
-          <caret line="556" column="19" selection-start-line="556" selection-start-column="19" selection-end-line="556" selection-end-column="19" />
+        <state vertical-scroll-proportion="-95.318184">
+          <caret line="556" column="0" selection-start-line="556" selection-start-column="0" selection-end-line="557" selection-end-column="0" />
           <folding>
             <element signature="e#52#263#0" expanded="false" />
             <element signature="e#293#475#0" expanded="false" />
@@ -1011,63 +1219,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mobile/views/cart.vue">
+    <entry file="file://$PROJECT_DIR$/src/mobile/views/detail.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.088889">
-          <caret line="578" column="0" selection-start-line="578" selection-start-column="0" selection-end-line="579" selection-end-column="0" />
+        <state vertical-scroll-proportion="-6.4">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <element signature="n#header#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#header#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#footer#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#footer#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#mt-popup#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#mt-popup#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#11338#17298#0" expanded="false" />
-            <element signature="e#11419#11786#0" expanded="false" />
-            <element signature="e#11808#12908#0" expanded="false" />
-            <element signature="e#12930#13835#0" expanded="false" />
-            <element signature="e#13857#14762#0" expanded="false" />
-            <element signature="e#14784#15155#0" expanded="false" />
-            <element signature="e#15177#16083#0" expanded="false" />
-            <element signature="e#16105#17012#0" expanded="false" />
-            <element signature="e#17384#17878#0" expanded="false" />
-            <element signature="e#17942#18308#0" expanded="false" />
-            <element signature="e#18450#18818#0" expanded="false" />
-            <element signature="e#18846#19213#0" expanded="false" />
-            <element signature="e#18988#19152#0" expanded="false" />
-            <element signature="e#19249#19599#0" expanded="false" />
-            <element signature="e#19642#19993#0" expanded="false" />
-            <element signature="e#20020#20089#0" expanded="false" />
-            <element signature="e#20162#20850#0" expanded="false" />
-            <element signature="e#20890#20993#0" expanded="false" />
-            <element signature="e#21076#22644#0" expanded="false" />
-            <element signature="e#22678#23352#0" expanded="false" />
-            <element signature="e#23389#23613#0" expanded="false" />
-            <element signature="e#23653#23876#0" expanded="false" />
-            <element signature="e#23913#24844#0" expanded="false" />
-            <element signature="e#24293#24462#0" expanded="false" />
-            <element signature="e#24498#24810#0" expanded="false" />
-            <element signature="e#24876#26714#0" expanded="false" />
-            <element signature="e#25532#25568#0" expanded="false" />
-            <element signature="e#25759#25974#0" expanded="false" />
-            <element signature="e#26028#26213#0" expanded="false" />
-            <element signature="e#26253#26538#0" expanded="false" />
-            <element signature="e#26749#26808#0" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mobile.vue">
+    <entry file="file://$PROJECT_DIR$/src/mobile/assets/scss/detail.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28088427">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.3966942">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
           <folding />
         </state>
       </provider>
